@@ -1,0 +1,53 @@
+keyword,frame,relation_type,polarity,score_weight,description
+upgrade alliance,security,cooperation,positive,3,동맹 강화를 직접적으로 나타내는 표현
+alliance,security,cooperation,positive,2,동맹 관계를 나타내는 표현
+military drills,security,cooperation,positive,3,공동 군사훈련을 나타내는 표현
+nuclear deterrence,security,cooperation,positive,3,핵 억제 협력을 나타내는 표현
+security cooperation,security,cooperation,positive,2,안보 협력을 나타내는 표현
+peaceful diplomacy,diplomacy,cooperation,positive,2,평화적 외교 협력을 나타내는 표현
+trade deal,economy,cooperation,positive,2,무역 합의를 나타내는 표현
+investment,economy,cooperation,positive,1,경제 협력 또는 투자를 나타내는 표현
+supply chain cooperation,economy,cooperation,positive,3,공급망 협력을 직접 나타내는 표현
+supply chain,economy,cooperation,positive,2,공급망 협력 또는 경제안보를 나타내는 표현
+energy cooperation,economy,cooperation,positive,2,에너지 협력을 나타내는 표현
+critical minerals,economy,cooperation,positive,2,핵심광물 공급망 협력을 나타내는 표현
+rare earths,economy,cooperation,positive,2,희토류 공급망 협력을 나타내는 표현
+defense research,security,cooperation,positive,2,방위 연구개발 협력을 나타내는 표현
+agreement,diplomacy,cooperation,positive,2,합의 또는 협정을 나타내는 표현
+vow cooperation,diplomacy,cooperation,positive,2,협력 의사를 나타내는 표현
+boost,economy,cooperation,positive,1,강화 또는 확대를 나타내는 표현
+strengthen,security,cooperation,positive,1,관계 또는 협력 강화를 나타내는 표현
+shore up security,security,cooperation,positive,2,안보 협력 강화를 나타내는 표현
+maintain supply chain stability,economy,cooperation,positive,3,공급망 안정 협력을 나타내는 표현
+summit,diplomacy,neutral,neutral,1,정상회담을 나타내지만 방향성은 문맥 의존
+talks,diplomacy,neutral,neutral,1,회담 또는 협의를 나타내지만 방향성은 문맥 의존
+meeting,diplomacy,neutral,neutral,1,외교 접촉을 나타내는 표현
+visit,diplomacy,neutral,neutral,1,외교 방문을 나타내는 표현
+truce,diplomacy,neutral,neutral,1,갈등 완화 가능성을 나타내지만 완전한 협력은 아님
+tariff exclusions,economy,cooperation,positive,1,관세 예외 연장으로 제한적 완화 신호
+tariff,economy,conflict,negative,2,관세 갈등 또는 무역 분쟁을 나타내는 표현
+sanctions,diplomacy,conflict,negative,3,제재를 나타내는 표현
+blacklist,economy,conflict,negative,3,경제·기술 제재를 나타내는 표현
+security risks,security,conflict,negative,2,안보 위험 인식을 나타내는 표현
+THAAD,security,conflict,negative,2,사드 배치 갈등을 나타내는 표현
+missile defense,security,conflict,negative,2,미사일 방어체계 관련 안보 갈등
+Taiwan Strait,security,conflict,negative,3,대만해협 안보 갈등을 나타내는 표현
+Taiwan,security,conflict,negative,2,대만 문제 관련 갈등 가능성
+Senkaku,security,conflict,negative,2,센카쿠 또는 댜오위다오 영유권 갈등
+East China Sea,security,conflict,negative,2,동중국해 안보 갈등
+coercion,security,conflict,negative,3,강압 또는 안보 압박을 나타내는 표현
+diplomatic dispute,diplomacy,conflict,negative,2,외교 분쟁을 나타내는 표현
+forced labour,history,conflict,negative,2,강제동원 역사 갈등을 나타내는 표현
+dispute,diplomacy,conflict,negative,2,분쟁 또는 갈등을 나타내는 표현
+human rights,human_rights,conflict,negative,2,인권 문제를 둘러싼 갈등
+Xinjiang,human_rights,conflict,negative,3,신장 인권 문제 관련 갈등
+seafood,economy,conflict,negative,2,수산물 수입 제한 등 경제 갈등 가능성
+suspend imports,economy,conflict,negative,3,수입 중단 또는 경제보복을 나타내는 표현
+great hit,economy,conflict,negative,2,무역 협력 타격을 나타내는 표현
+security overhaul,security,conflict,negative,2,안보 전략 개편과 긴장 상승을 나타내는 표현
+North Korea,context,context,context,0,배경 국가명으로 점수에는 직접 반영하지 않음
+Biden,context,context,context,0,인물명으로 관계 점수에는 반영하지 않음
+Trump,context,context,context,0,인물명으로 관계 점수에는 반영하지 않음
+Xi,context,context,context,0,인물명으로 관계 점수에는 반영하지 않음
+Yoon,context,context,context,0,인물명으로 관계 점수에는 반영하지 않음
+Kishida,context,context,context,0,인물명으로 관계 점수에는 반영하지 않음

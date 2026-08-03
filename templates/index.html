@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국제 뉴스 기반 국가 관계 분석 프로그램</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v=static_version('style.css')) }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">Keyword-Based News Analysis</p>
+                <h1>국제 뉴스 기반 국가 관계 분석 프로그램</h1>
+            </div>
+            <div class="controls-card">
+                <label for="pairSelect">국가쌍 선택</label>
+                <div class="control-row">
+                    <select id="pairSelect" aria-label="국가쌍 선택"></select>
+                    <button id="analyzeButton" type="button">분석</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="errorBanner" class="notice error hidden" role="alert"></section>
+            <section id="emptyState" class="notice hidden">해당 국가쌍의 데이터가 없습니다</section>
+
+            <section id="resultSection" class="result-section hidden">
+                <div class="summary-grid">
+                    <article class="card final-card">
+                        <div class="card-heading">
+                            <span>최종 관계</span>
+                        </div>
+                        <div class="leader-matchup" aria-label="선택한 국가 정상">
+                            <figure class="leader-profile">
+                                <div id="countryAPortrait" class="leader-portrait is-missing">
+                                    <img id="countryAImage" class="leader-image" src="" alt="">
+                                    <span id="countryAFallback" class="leader-fallback" aria-hidden="true">-</span>
+                                </div>
+                                <figcaption id="countryALabel">-</figcaption>
+                            </figure>
+
+                            <div class="matchup-center">
+                                <span class="matchup-kicker">Bilateral Relations</span>
+                                <h2 id="selectedPair">-</h2>
+                                <span id="finalRelationBadge" class="badge">-</span>
+                            </div>
+
+                            <figure class="leader-profile">
+                                <div id="countryBPortrait" class="leader-portrait is-missing">
+                                    <img id="countryBImage" class="leader-image" src="" alt="">
+                                    <span id="countryBFallback" class="leader-fallback" aria-hidden="true">-</span>
+                                </div>
+                                <figcaption id="countryBLabel">-</figcaption>
+                            </figure>
+                        </div>
+                        <div class="fact-row">
+                            <span>변화 방향</span>
+                            <strong id="changeDirection">-</strong>
+                        </div>
+                        <p id="interpretationText" class="interpretation">-</p>
+                    </article>
+
+                    <article class="card score-card">
+                        <div class="card-heading">
+                            <span>점수 요약</span>
+                        </div>
+                        <div class="metric-grid">
+                            <div class="metric">
+                                <span>총 기사 수</span>
+                                <strong id="totalArticles">0</strong>
+                            </div>
+                            <div class="metric">
+                                <span>past 기사 수</span>
+                                <strong id="pastCount">0</strong>
+                            </div>
+                            <div class="metric">
+                                <span>recent 기사 수</span>
+                                <strong id="recentCount">0</strong>
+                            </div>
+                            <div class="metric">
+                                <span>과거 평균 관계 점수</span>
+                                <strong id="pastAverage">0.00</strong>
+                            </div>
+                            <div class="metric">
+                                <span>최근 평균 관계 점수</span>
+                                <strong id="recentAverage">0.00</strong>
+                            </div>
+                            <div class="metric">
+                                <span>변화량</span>
+                                <strong id="changeValue">0.00</strong>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <article class="card evidence-card">
+                    <div class="card-heading">
+                        <span>근거</span>
+                        <span id="dominantFrameBadge" class="badge badge-neutral">-</span>
+                    </div>
+                    <div class="evidence-grid">
+                        <div>
+                            <h3>프레임별 기사 수</h3>
+                            <div id="frameCountsList" class="chip-list"></div>
+                        </div>
+                        <div>
+                            <h3>협력/중립/갈등 기사 수</h3>
+                            <div id="relationCountsList" class="chip-list"></div>
+                        </div>
+                        <div>
+                            <h3>주요 탐지 키워드 Top 10</h3>
+                            <div id="keywordList" class="keyword-list"></div>
+                        </div>
+                    </div>
+                    <p id="evidenceText" class="evidence-text">-</p>
+                </article>
+
+                <section class="chart-grid" aria-label="분석 그래프">
+                    <article class="card chart-card">
+                        <h3>과거 평균 점수와 최근 평균 점수</h3>
+                        <div class="chart-box">
+                            <canvas id="scoreChart"></canvas>
+                        </div>
+                    </article>
+                    <article class="card chart-card">
+                        <h3>프레임별 기사 수</h3>
+                        <div class="chart-box">
+                            <canvas id="frameChart"></canvas>
+                        </div>
+                    </article>
+                    <article class="card chart-card">
+                        <h3>협력/중립/갈등 비율</h3>
+                        <div class="chart-box">
+                            <canvas id="relationChart"></canvas>
+                        </div>
+                    </article>
+                    <article class="card chart-card">
+                        <h3>주요 탐지 키워드 Top 10</h3>
+                        <div class="chart-box">
+                            <canvas id="keywordChart"></canvas>
+                        </div>
+                    </article>
+                </section>
+
+                <article class="card table-card">
+                    <div class="card-heading">
+                        <span>뉴스 출처 목록</span>
+                        <span id="tableCount" class="subtle-text">0건</span>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>period</th>
+                                    <th>date</th>
+                                    <th>source</th>
+                                    <th>title</th>
+                                    <th>main_frame</th>
+                                    <th>relation_type</th>
+                                    <th>relation_score</th>
+                                    <th>article_score</th>
+                                    <th>detected_keywords</th>
+                                    <th>summary</th>
+                                    <th>원문 링크</th>
+                                </tr>
+                            </thead>
+                            <tbody id="articleRows"></tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            본 프로그램은 교육용 분석 도구이며, 제한된 뉴스 표본과 키워드 규칙을 기반으로 하므로 실제 국가 관계 전체를 단정하지 않습니다.
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js', v=static_version('script.js')) }}"></script>
+</body>
+</html>

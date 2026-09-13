@@ -1,0 +1,3020 @@
+{
+  "pairs": [
+    {
+      "country_a": "South Korea",
+      "country_b": "United States",
+      "label": "South Korea - United States"
+    },
+    {
+      "country_a": "South Korea",
+      "country_b": "China",
+      "label": "South Korea - China"
+    },
+    {
+      "country_a": "South Korea",
+      "country_b": "Japan",
+      "label": "South Korea - Japan"
+    },
+    {
+      "country_a": "United States",
+      "country_b": "China",
+      "label": "United States - China"
+    },
+    {
+      "country_a": "United States",
+      "country_b": "Japan",
+      "label": "United States - Japan"
+    },
+    {
+      "country_a": "China",
+      "country_b": "Japan",
+      "label": "China - Japan"
+    }
+  ],
+  "results": {
+    "South Korea||United States": {
+      "selected_pair": {
+        "country_a": "South Korea",
+        "country_b": "United States",
+        "label": "South Korea - United States"
+      },
+      "has_data": true,
+      "message": "",
+      "summary": {
+        "total_articles": 6,
+        "past_count": 3,
+        "recent_count": 3,
+        "past_average_score": 2.67,
+        "recent_average_score": 1.67,
+        "change": -1.0,
+        "dominant_frame": "security",
+        "dominant_frame_label": "안보",
+        "final_relation_type": "cooperation",
+        "final_relation_label": "협력 중심 관계",
+        "change_direction_type": "conflict",
+        "change_direction_label": "과거보다 갈등 방향으로 변화",
+        "interpretation": "South Korea - United States의 최근 평균 기사 점수는 1.67로 협력 중심 관계로 해석된다. 과거 평균 2.67와 비교한 변화량은 -1.00이며, 전체 변화 방향은 과거보다 갈등 방향으로 변화로 볼 수 있다. 이 결과는 기사 제목과 요약에 나타난 협력·갈등 키워드를 규칙표의 가중치로 계산한 교육용 분석 결과이다.",
+        "evidence_sentence": "주요 프레임은 안보이며, 기사 유형은 협력 5건, 중립 1건으로 분포한다. 분석에 자주 등장한 주요 점수 반영 키워드는 alliance, investment, military drills, nuclear deterrence, peaceful diplomacy이다. context 키워드는 탐지 결과에는 표시하지만 관계 점수 계산에는 넣지 않았다."
+      },
+      "frame_counts": [
+        {
+          "name": "security",
+          "label": "안보",
+          "count": 4,
+          "ratio": 66.7
+        },
+        {
+          "name": "diplomacy",
+          "label": "외교",
+          "count": 1,
+          "ratio": 16.7
+        },
+        {
+          "name": "economy",
+          "label": "경제",
+          "count": 1,
+          "ratio": 16.7
+        }
+      ],
+      "relation_counts": [
+        {
+          "name": "cooperation",
+          "label": "협력",
+          "count": 5,
+          "ratio": 83.3
+        },
+        {
+          "name": "neutral",
+          "label": "중립",
+          "count": 1,
+          "ratio": 16.7
+        },
+        {
+          "name": "conflict",
+          "label": "갈등",
+          "count": 0,
+          "ratio": 0.0
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "North Korea",
+          "count": 5,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "alliance",
+          "count": 3,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "Biden",
+          "count": 2,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "Trump",
+          "count": 1,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "investment",
+          "count": 1,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 1
+        },
+        {
+          "keyword": "military drills",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 3
+        },
+        {
+          "keyword": "nuclear deterrence",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 3
+        },
+        {
+          "keyword": "peaceful diplomacy",
+          "count": 1,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "security cooperation",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "summit",
+          "count": 1,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "score_weight": 1
+        }
+      ],
+      "articles": [
+        {
+          "id": "1",
+          "period": "past",
+          "date": "2021-02-04",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea's Moon pledges to upgrade alliance with US in call with Biden",
+          "url": "https://www.reuters.com/world/asia-pacific/s-koreas-moon-pledges-upgrade-alliance-with-us-call-with-biden-2021-02-04/",
+          "country_a": "South Korea",
+          "country_b": "United States",
+          "summary": "문재인 대통령이 바이든 대통령과 통화하며 한미동맹 강화와 대북전략 협력을 언급한 기사다. alliance, diplomacy, North Korea 관련 맥락이 포함된다.",
+          "detected_keywords": [
+            "upgrade alliance",
+            "North Korea",
+            "alliance",
+            "Biden"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "upgrade alliance",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 3,
+              "description": "동맹 강화를 직접적으로 나타내는 표현"
+            },
+            {
+              "keyword": "North Korea",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "배경 국가명으로 점수에는 직접 반영하지 않음"
+            },
+            {
+              "keyword": "alliance",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "동맹 관계를 나타내는 표현"
+            },
+            {
+              "keyword": "Biden",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 5,
+          "conflict_score": 0,
+          "relation_score": 5,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 3,
+          "article_score": 3,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "2",
+          "period": "past",
+          "date": "2021-05-21",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea's Moon to be second leader, second Asian welcomed by Biden",
+          "url": "https://www.reuters.com/world/asia-pacific/south-koreas-moon-be-second-leader-second-asian-welcomed-by-biden-2021-05-21/",
+          "country_a": "South Korea",
+          "country_b": "United States",
+          "summary": "바이든-문재인 정상회담에서 북한 문제와 한미동맹을 중심으로 협력 의지가 드러난 기사다. summit, alliance, North Korea 키워드가 관계 분석에 사용될 수 있다.",
+          "detected_keywords": [
+            "North Korea",
+            "alliance",
+            "summit",
+            "Biden"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "North Korea",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "배경 국가명으로 점수에는 직접 반영하지 않음"
+            },
+            {
+              "keyword": "alliance",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "동맹 관계를 나타내는 표현"
+            },
+            {
+              "keyword": "summit",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "정상회담을 나타내지만 방향성은 문맥 의존"
+            },
+            {
+              "keyword": "Biden",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 2,
+          "conflict_score": 0,
+          "relation_score": 2,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "3",
+          "period": "past",
+          "date": "2022-08-22",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea, US begin military drills amid North Korea backlash",
+          "url": "https://www.reuters.com/world/south-korea-us-begin-military-drills-amid-nkorea-backlash-2022-08-22/",
+          "country_a": "South Korea",
+          "country_b": "United States",
+          "summary": "한국과 미국이 북한 위협에 대응해 수년 만에 최대 규모의 연합 군사훈련을 시작한 기사다. military drills, alliance, North Korea 키워드가 포함된다.",
+          "detected_keywords": [
+            "military drills",
+            "North Korea",
+            "alliance"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "military drills",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 3,
+              "description": "공동 군사훈련을 나타내는 표현"
+            },
+            {
+              "keyword": "North Korea",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "배경 국가명으로 점수에는 직접 반영하지 않음"
+            },
+            {
+              "keyword": "alliance",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "동맹 관계를 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 5,
+          "conflict_score": 0,
+          "relation_score": 5,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 3,
+          "article_score": 3,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "4",
+          "period": "recent",
+          "date": "2025-10-30",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea releases details of trade deal struck with US",
+          "url": "https://www.reuters.com/business/autos-transportation/south-korea-releases-details-trade-deal-struck-with-us-2025-10-30/",
+          "country_a": "South Korea",
+          "country_b": "United States",
+          "summary": "미국과 한국이 무역 합의 세부 사항을 공개하고 자동차 관세와 투자 패키지 등을 논의한 기사다. trade deal, tariff, investment 키워드가 포함된다.",
+          "detected_keywords": [
+            "trade deal",
+            "investment",
+            "tariff"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "trade deal",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "무역 합의를 나타내는 표현"
+            },
+            {
+              "keyword": "investment",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 1,
+              "description": "경제 협력 또는 투자를 나타내는 표현"
+            },
+            {
+              "keyword": "tariff",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "관세 갈등 또는 무역 분쟁을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 3,
+          "conflict_score": 2,
+          "relation_score": 1,
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "tone_score": 0,
+          "intensity_score": 1,
+          "article_score": 0,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        },
+        {
+          "id": "5",
+          "period": "recent",
+          "date": "2026-06-11",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "US, South Korea hold nuclear deterrence talks as North Korea expands arms push",
+          "url": "https://www.reuters.com/world/asia-pacific/us-south-korea-hold-nuclear-deterrence-talks-north-korea-expands-arms-push-2026-06-11/",
+          "country_a": "South Korea",
+          "country_b": "United States",
+          "summary": "한미가 핵협의그룹 회의를 열어 북한 핵 위협에 대한 억제력과 공동 대응을 논의한 기사다. nuclear deterrence, talks, North Korea, security cooperation 키워드가 포함된다.",
+          "detected_keywords": [
+            "security cooperation",
+            "nuclear deterrence",
+            "North Korea",
+            "talks"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "security cooperation",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "안보 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "nuclear deterrence",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 3,
+              "description": "핵 억제 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "North Korea",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "배경 국가명으로 점수에는 직접 반영하지 않음"
+            },
+            {
+              "keyword": "talks",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "회담 또는 협의를 나타내지만 방향성은 문맥 의존"
+            }
+          ],
+          "cooperation_score": 5,
+          "conflict_score": 0,
+          "relation_score": 5,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 3,
+          "article_score": 3,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "6",
+          "period": "recent",
+          "date": "2026-06-16",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea's Lee asks Trump to lead peaceful diplomacy with North Korea",
+          "url": "https://www.reuters.com/business/aerospace-defense/south-koreas-lee-asks-trump-lead-peaceful-diplomacy-with-north-korea-2026-06-16/",
+          "country_a": "South Korea",
+          "country_b": "United States",
+          "summary": "한국 대통령이 미국 대통령에게 북한 문제에 대한 평화 외교를 주도해 달라고 요청한 기사다. peaceful diplomacy, Trump, North Korea 키워드가 포함된다.",
+          "detected_keywords": [
+            "peaceful diplomacy",
+            "North Korea",
+            "Trump"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "peaceful diplomacy",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "평화적 외교 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "North Korea",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "배경 국가명으로 점수에는 직접 반영하지 않음"
+            },
+            {
+              "keyword": "Trump",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 2,
+          "conflict_score": 0,
+          "relation_score": 2,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "diplomacy",
+          "main_frame_label": "외교"
+        }
+      ]
+    },
+    "South Korea||China": {
+      "selected_pair": {
+        "country_a": "South Korea",
+        "country_b": "China",
+        "label": "South Korea - China"
+      },
+      "has_data": true,
+      "message": "",
+      "summary": {
+        "total_articles": 6,
+        "past_count": 3,
+        "recent_count": 3,
+        "past_average_score": 0.0,
+        "recent_average_score": 2.67,
+        "change": 2.67,
+        "dominant_frame": "diplomacy",
+        "dominant_frame_label": "외교",
+        "final_relation_type": "cooperation",
+        "final_relation_label": "협력 중심 관계",
+        "change_direction_type": "cooperation",
+        "change_direction_label": "과거보다 협력 방향으로 변화",
+        "interpretation": "South Korea - China의 최근 평균 기사 점수는 2.67로 협력 중심 관계로 해석된다. 과거 평균 0.00와 비교한 변화량은 2.67이며, 전체 변화 방향은 과거보다 협력 방향으로 변화로 볼 수 있다. 이 결과는 기사 제목과 요약에 나타난 협력·갈등 키워드를 규칙표의 가중치로 계산한 교육용 분석 결과이다.",
+        "evidence_sentence": "주요 프레임은 외교이며, 기사 유형은 협력 4건, 중립 1건, 갈등 1건으로 분포한다. 분석에 자주 등장한 주요 점수 반영 키워드는 meeting, supply chain, THAAD, agreement, investment이다. context 키워드는 탐지 결과에는 표시하지만 관계 점수 계산에는 넣지 않았다."
+      },
+      "frame_counts": [
+        {
+          "name": "diplomacy",
+          "label": "외교",
+          "count": 3,
+          "ratio": 50.0
+        },
+        {
+          "name": "economy",
+          "label": "경제",
+          "count": 2,
+          "ratio": 33.3
+        },
+        {
+          "name": "security",
+          "label": "안보",
+          "count": 1,
+          "ratio": 16.7
+        }
+      ],
+      "relation_counts": [
+        {
+          "name": "cooperation",
+          "label": "협력",
+          "count": 4,
+          "ratio": 66.7
+        },
+        {
+          "name": "neutral",
+          "label": "중립",
+          "count": 1,
+          "ratio": 16.7
+        },
+        {
+          "name": "conflict",
+          "label": "갈등",
+          "count": 1,
+          "ratio": 16.7
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "meeting",
+          "count": 3,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "score_weight": 1
+        },
+        {
+          "keyword": "supply chain",
+          "count": 2,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "North Korea",
+          "count": 1,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "THAAD",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "agreement",
+          "count": 1,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "investment",
+          "count": 1,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 1
+        },
+        {
+          "keyword": "maintain supply chain stability",
+          "count": 1,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 3
+        },
+        {
+          "keyword": "missile defense",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "supply chain cooperation",
+          "count": 1,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 3
+        },
+        {
+          "keyword": "visit",
+          "count": 1,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "score_weight": 1
+        }
+      ],
+      "articles": [
+        {
+          "id": "7",
+          "period": "past",
+          "date": "2021-03-31",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korean foreign minister going to China for first time in three years",
+          "url": "https://www.reuters.com/world/china/skorean-foreign-minister-going-china-first-time-3-years-2021-03-31/",
+          "country_a": "South Korea",
+          "country_b": "China",
+          "summary": "한국 외교장관이 3년 만에 중국을 방문해 관계 개선을 논의한 기사다. visit, diplomacy, meeting 키워드가 포함된다.",
+          "detected_keywords": [
+            "meeting",
+            "visit"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "meeting",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "외교 접촉을 나타내는 표현"
+            },
+            {
+              "keyword": "visit",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "외교 방문을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 0,
+          "relation_score": 0,
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "tone_score": 0,
+          "intensity_score": 1,
+          "article_score": 0,
+          "main_frame": "diplomacy",
+          "main_frame_label": "외교"
+        },
+        {
+          "id": "8",
+          "period": "past",
+          "date": "2021-04-03",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "China, South Korea vow cooperation on North Korea after top diplomat meeting",
+          "url": "https://www.reuters.com/world/china/china-south-korea-vow-cooperation-north-korea-after-top-diplomat-meeting-2021-04-03/",
+          "country_a": "South Korea",
+          "country_b": "China",
+          "summary": "한중 외교장관 회담에서 한반도 비핵화와 평화 문제에서 중국의 역할을 논의한 기사다. vow cooperation, meeting, North Korea 키워드가 포함된다.",
+          "detected_keywords": [
+            "vow cooperation",
+            "North Korea",
+            "meeting"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "vow cooperation",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "협력 의사를 나타내는 표현"
+            },
+            {
+              "keyword": "North Korea",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "배경 국가명으로 점수에는 직접 반영하지 않음"
+            },
+            {
+              "keyword": "meeting",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "외교 접촉을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 2,
+          "conflict_score": 0,
+          "relation_score": 2,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "diplomacy",
+          "main_frame_label": "외교"
+        },
+        {
+          "id": "9",
+          "period": "past",
+          "date": "2022-08-11",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea says THAAD missile system is means of self defence",
+          "url": "https://www.reuters.com/world/asia-pacific/skorea-says-thaad-missile-system-is-means-self-defence-news1-2022-08-11/",
+          "country_a": "South Korea",
+          "country_b": "China",
+          "summary": "한국과 중국이 사드 배치 문제를 두고 충돌한 기사다. THAAD, missile defense, security 키워드가 포함된다.",
+          "detected_keywords": [
+            "missile defense",
+            "THAAD"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "missile defense",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "미사일 방어체계 관련 안보 갈등"
+            },
+            {
+              "keyword": "THAAD",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "사드 배치 갈등을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 4,
+          "relation_score": -4,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 2,
+          "article_score": -2,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "10",
+          "period": "recent",
+          "date": "2025-03-29",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea, China industry ministers agree to cooperate in evolving global environment",
+          "url": "https://www.reuters.com/world/asia-pacific/south-korea-china-industry-ministers-agree-cooperate-evolving-global-environment-2025-03-29/",
+          "country_a": "South Korea",
+          "country_b": "China",
+          "summary": "한중 산업장관이 변화하는 글로벌 무역환경 속에서 협력하기로 한 기사다. agreement, cooperation, trade 키워드가 포함된다.",
+          "detected_keywords": [
+            "agreement"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "agreement",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "합의 또는 협정을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 2,
+          "conflict_score": 0,
+          "relation_score": 2,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "diplomacy",
+          "main_frame_label": "외교"
+        },
+        {
+          "id": "11",
+          "period": "recent",
+          "date": "2025-11-02",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "China's commerce minister calls for supply chain cooperation with South Korea",
+          "url": "https://www.reuters.com/world/asia-pacific/chinas-commerce-minister-calls-supply-chain-cooperation-with-south-korea-2025-11-02/",
+          "country_a": "South Korea",
+          "country_b": "China",
+          "summary": "중국 상무부 장관이 한국과 공급망 협력 강화를 논의한 기사다. supply chain cooperation, trade, meeting 키워드가 포함된다.",
+          "detected_keywords": [
+            "supply chain cooperation",
+            "supply chain",
+            "meeting"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "supply chain cooperation",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 3,
+              "description": "공급망 협력을 직접 나타내는 표현"
+            },
+            {
+              "keyword": "supply chain",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "공급망 협력 또는 경제안보를 나타내는 표현"
+            },
+            {
+              "keyword": "meeting",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "외교 접촉을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 5,
+          "conflict_score": 0,
+          "relation_score": 5,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 3,
+          "article_score": 3,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        },
+        {
+          "id": "12",
+          "period": "recent",
+          "date": "2026-03-19",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "China, South Korea vow to maintain supply chain stability as ties improve",
+          "url": "https://www.reuters.com/world/asia-pacific/china-south-korea-vow-maintain-supply-chain-stability-ties-improve-2026-03-19/",
+          "country_a": "South Korea",
+          "country_b": "China",
+          "summary": "중국과 한국이 공급망 안정과 무역·투자 협력을 유지하기로 한 기사다. maintain supply chain stability, supply chain, investment 키워드가 포함된다.",
+          "detected_keywords": [
+            "maintain supply chain stability",
+            "supply chain",
+            "investment"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "maintain supply chain stability",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 3,
+              "description": "공급망 안정 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "supply chain",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "공급망 협력 또는 경제안보를 나타내는 표현"
+            },
+            {
+              "keyword": "investment",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 1,
+              "description": "경제 협력 또는 투자를 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 6,
+          "conflict_score": 0,
+          "relation_score": 6,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 3,
+          "article_score": 3,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        }
+      ]
+    },
+    "South Korea||Japan": {
+      "selected_pair": {
+        "country_a": "South Korea",
+        "country_b": "Japan",
+        "label": "South Korea - Japan"
+      },
+      "has_data": true,
+      "message": "",
+      "summary": {
+        "total_articles": 6,
+        "past_count": 3,
+        "recent_count": 3,
+        "past_average_score": -0.67,
+        "recent_average_score": 2.0,
+        "change": 2.67,
+        "dominant_frame": "security",
+        "dominant_frame_label": "안보",
+        "final_relation_type": "cooperation",
+        "final_relation_label": "협력 중심 관계",
+        "change_direction_type": "cooperation",
+        "change_direction_label": "과거보다 협력 방향으로 변화",
+        "interpretation": "South Korea - Japan의 최근 평균 기사 점수는 2.00로 협력 중심 관계로 해석된다. 과거 평균 -0.67와 비교한 변화량은 2.67이며, 전체 변화 방향은 과거보다 협력 방향으로 변화로 볼 수 있다. 이 결과는 기사 제목과 요약에 나타난 협력·갈등 키워드를 규칙표의 가중치로 계산한 교육용 분석 결과이다.",
+        "evidence_sentence": "주요 프레임은 안보이며, 기사 유형은 협력 4건, 갈등 2건으로 분포한다. 분석에 자주 등장한 주요 점수 반영 키워드는 security cooperation, dispute, forced labour, boost, energy cooperation이다. context 키워드는 탐지 결과에는 표시하지만 관계 점수 계산에는 넣지 않았다."
+      },
+      "frame_counts": [
+        {
+          "name": "security",
+          "label": "안보",
+          "count": 3,
+          "ratio": 50.0
+        },
+        {
+          "name": "diplomacy",
+          "label": "외교",
+          "count": 2,
+          "ratio": 33.3
+        },
+        {
+          "name": "economy",
+          "label": "경제",
+          "count": 1,
+          "ratio": 16.7
+        }
+      ],
+      "relation_counts": [
+        {
+          "name": "cooperation",
+          "label": "협력",
+          "count": 4,
+          "ratio": 66.7
+        },
+        {
+          "name": "neutral",
+          "label": "중립",
+          "count": 0,
+          "ratio": 0.0
+        },
+        {
+          "name": "conflict",
+          "label": "갈등",
+          "count": 2,
+          "ratio": 33.3
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "security cooperation",
+          "count": 3,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "dispute",
+          "count": 2,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "forced labour",
+          "count": 2,
+          "frame": "history",
+          "frame_label": "역사",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "Yoon",
+          "count": 1,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "boost",
+          "count": 1,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 1
+        },
+        {
+          "keyword": "energy cooperation",
+          "count": 1,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "shore up security",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "strengthen",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 1
+        },
+        {
+          "keyword": "summit",
+          "count": 1,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "score_weight": 1
+        },
+        {
+          "keyword": "visit",
+          "count": 1,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "score_weight": 1
+        }
+      ],
+      "articles": [
+        {
+          "id": "13",
+          "period": "past",
+          "date": "2021-06-07",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea court dismisses forced labour case against Japanese firms",
+          "url": "https://www.reuters.com/world/asia-pacific/south-korea-court-dismisses-forced-labour-case-against-japanese-firms-2021-06-07/",
+          "country_a": "South Korea",
+          "country_b": "Japan",
+          "summary": "한국 법원이 일본 기업을 상대로 한 강제동원 손해배상 소송을 기각한 기사다. forced labour, history, dispute 키워드가 포함된다.",
+          "detected_keywords": [
+            "forced labour",
+            "dispute"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "forced labour",
+              "frame": "history",
+              "frame_label": "역사",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "강제동원 역사 갈등을 나타내는 표현"
+            },
+            {
+              "keyword": "dispute",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "분쟁 또는 갈등을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 4,
+          "relation_score": -4,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 2,
+          "article_score": -2,
+          "main_frame": "diplomacy",
+          "main_frame_label": "외교"
+        },
+        {
+          "id": "14",
+          "period": "past",
+          "date": "2023-03-06",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea to announce plans to resolve forced labour dispute with Japan",
+          "url": "https://www.reuters.com/world/asia-pacific/south-korea-announce-plans-resolve-forced-labour-dispute-with-japan-2023-03-06/",
+          "country_a": "South Korea",
+          "country_b": "Japan",
+          "summary": "한국 정부가 강제동원 배상 해법을 발표하며 한일 갈등 해결을 시도한 기사다. forced labour, dispute, diplomacy 키워드가 포함된다.",
+          "detected_keywords": [
+            "forced labour",
+            "dispute"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "forced labour",
+              "frame": "history",
+              "frame_label": "역사",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "강제동원 역사 갈등을 나타내는 표현"
+            },
+            {
+              "keyword": "dispute",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "분쟁 또는 갈등을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 4,
+          "relation_score": -4,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 2,
+          "article_score": -2,
+          "main_frame": "diplomacy",
+          "main_frame_label": "외교"
+        },
+        {
+          "id": "15",
+          "period": "past",
+          "date": "2023-03-15",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea's Yoon seeks friend in Tokyo amid regional tensions",
+          "url": "https://www.reuters.com/world/asia-pacific/south-koreas-yoon-seeks-friend-tokyo-amid-regional-tensions-2023-03-15/",
+          "country_a": "South Korea",
+          "country_b": "Japan",
+          "summary": "한국과 일본이 정상회담을 통해 무역 갈등을 완화하고 안보 협력 분위기를 만든 기사다. summit, security cooperation, trade 키워드가 포함된다.",
+          "detected_keywords": [
+            "security cooperation",
+            "summit",
+            "Yoon"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "security cooperation",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "안보 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "summit",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "정상회담을 나타내지만 방향성은 문맥 의존"
+            },
+            {
+              "keyword": "Yoon",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 2,
+          "conflict_score": 0,
+          "relation_score": 2,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "16",
+          "period": "recent",
+          "date": "2025-01-10",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "Japan foreign minister to visit South Korea to shore up security cooperation",
+          "url": "https://www.reuters.com/world/asia-pacific/japan-foreign-minister-visit-skorea-shore-up-security-cooperation-2025-01-10/",
+          "country_a": "South Korea",
+          "country_b": "Japan",
+          "summary": "일본 외무상이 한국을 방문해 안보 협력을 강화하려 한 기사다. visit, shore up security, security cooperation 키워드가 포함된다.",
+          "detected_keywords": [
+            "security cooperation",
+            "shore up security",
+            "visit"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "security cooperation",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "안보 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "shore up security",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "안보 협력 강화를 나타내는 표현"
+            },
+            {
+              "keyword": "visit",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "외교 방문을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 4,
+          "conflict_score": 0,
+          "relation_score": 4,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "18",
+          "period": "recent",
+          "date": "2026-05-19",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea, Japan agree to boost energy cooperation, strengthen security ties",
+          "url": "https://www.reuters.com/business/energy/south-korea-japan-agree-boost-energy-cooperation-strengthen-security-ties-2026-05-19/",
+          "country_a": "South Korea",
+          "country_b": "Japan",
+          "summary": "한국과 일본이 에너지 공급과 안보 협력을 강화하기로 한 기사다. energy cooperation, boost, strengthen 키워드가 포함된다.",
+          "detected_keywords": [
+            "energy cooperation",
+            "strengthen",
+            "boost"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "energy cooperation",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "에너지 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "strengthen",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 1,
+              "description": "관계 또는 협력 강화를 나타내는 표현"
+            },
+            {
+              "keyword": "boost",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 1,
+              "description": "강화 또는 확대를 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 4,
+          "conflict_score": 0,
+          "relation_score": 4,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        },
+        {
+          "id": "17",
+          "period": "recent",
+          "date": "2026-05-31",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "South Korea, Japan discuss military logistics support deal, Seoul says",
+          "url": "https://www.reuters.com/world/asia-pacific/south-korea-japan-discuss-military-logistics-support-deal-seoul-says-2026-05-31/",
+          "country_a": "South Korea",
+          "country_b": "Japan",
+          "summary": "한국과 일본이 군수지원협정 가능성을 논의한 기사다. military logistics, security cooperation, defense 키워드가 포함된다.",
+          "detected_keywords": [
+            "security cooperation"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "security cooperation",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "안보 협력을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 2,
+          "conflict_score": 0,
+          "relation_score": 2,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        }
+      ]
+    },
+    "United States||China": {
+      "selected_pair": {
+        "country_a": "United States",
+        "country_b": "China",
+        "label": "United States - China"
+      },
+      "has_data": true,
+      "message": "",
+      "summary": {
+        "total_articles": 6,
+        "past_count": 3,
+        "recent_count": 3,
+        "past_average_score": -2.67,
+        "recent_average_score": -1.67,
+        "change": 1.0,
+        "dominant_frame": "economy",
+        "dominant_frame_label": "경제",
+        "final_relation_type": "conflict",
+        "final_relation_label": "갈등 중심 관계",
+        "change_direction_type": "cooperation",
+        "change_direction_label": "과거보다 협력 방향으로 변화",
+        "interpretation": "United States - China의 최근 평균 기사 점수는 -1.67로 갈등 중심 관계로 해석된다. 과거 평균 -2.67와 비교한 변화량은 1.00이며, 전체 변화 방향은 과거보다 협력 방향으로 변화로 볼 수 있다. 이 결과는 기사 제목과 요약에 나타난 협력·갈등 키워드를 규칙표의 가중치로 계산한 교육용 분석 결과이다.",
+        "evidence_sentence": "주요 프레임은 경제이며, 기사 유형은 중립 1건, 갈등 5건으로 분포한다. 분석에 자주 등장한 주요 점수 반영 키워드는 Taiwan, human rights, sanctions, tariff, Xinjiang이다. context 키워드는 탐지 결과에는 표시하지만 관계 점수 계산에는 넣지 않았다."
+      },
+      "frame_counts": [
+        {
+          "name": "economy",
+          "label": "경제",
+          "count": 3,
+          "ratio": 50.0
+        },
+        {
+          "name": "human_rights",
+          "label": "인권",
+          "count": 2,
+          "ratio": 33.3
+        },
+        {
+          "name": "diplomacy",
+          "label": "외교",
+          "count": 1,
+          "ratio": 16.7
+        }
+      ],
+      "relation_counts": [
+        {
+          "name": "cooperation",
+          "label": "협력",
+          "count": 0,
+          "ratio": 0.0
+        },
+        {
+          "name": "neutral",
+          "label": "중립",
+          "count": 1,
+          "ratio": 16.7
+        },
+        {
+          "name": "conflict",
+          "label": "갈등",
+          "count": 5,
+          "ratio": 83.3
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "Taiwan",
+          "count": 2,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "Xi",
+          "count": 2,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "human rights",
+          "count": 2,
+          "frame": "human_rights",
+          "frame_label": "인권",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "sanctions",
+          "count": 2,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 3
+        },
+        {
+          "keyword": "tariff",
+          "count": 2,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "Biden",
+          "count": 1,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "Trump",
+          "count": 1,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "Xinjiang",
+          "count": 1,
+          "frame": "human_rights",
+          "frame_label": "인권",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 3
+        },
+        {
+          "keyword": "blacklist",
+          "count": 1,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 3
+        },
+        {
+          "keyword": "security risks",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        }
+      ],
+      "articles": [
+        {
+          "id": "19",
+          "period": "past",
+          "date": "2021-02-11",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "China will eat our lunch, Biden warns after clashing with Xi on most fronts",
+          "url": "https://www.reuters.com/world/china/china-will-eat-our-lunch-biden-warns-after-clashing-with-xi-most-fronts-2021-02-11/",
+          "country_a": "United States",
+          "country_b": "China",
+          "summary": "바이든과 시진핑의 첫 통화에서 인권, 홍콩, 신장, 무역, 대만 문제를 두고 입장 차이가 드러난 기사다. Biden, Xi, human rights, Taiwan 키워드가 포함된다.",
+          "detected_keywords": [
+            "human rights",
+            "Taiwan",
+            "Biden",
+            "Xi"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "human rights",
+              "frame": "human_rights",
+              "frame_label": "인권",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "인권 문제를 둘러싼 갈등"
+            },
+            {
+              "keyword": "Taiwan",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "대만 문제 관련 갈등 가능성"
+            },
+            {
+              "keyword": "Biden",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            },
+            {
+              "keyword": "Xi",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 4,
+          "relation_score": -4,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 2,
+          "article_score": -2,
+          "main_frame": "human_rights",
+          "main_frame_label": "인권"
+        },
+        {
+          "id": "20",
+          "period": "past",
+          "date": "2021-03-22",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "West sanctions China over Xinjiang abuses, Beijing hits back at EU",
+          "url": "https://www.reuters.com/world/china/west-sanctions-china-over-xinjiang-abuses-beijing-hits-back-eu-2021-03-22/",
+          "country_a": "United States",
+          "country_b": "China",
+          "summary": "미국·EU·영국·캐나다가 신장 인권 문제로 중국 관리들을 제재하고 중국도 맞대응한 기사다. sanctions, Xinjiang, human rights 키워드가 포함된다.",
+          "detected_keywords": [
+            "human rights",
+            "sanctions",
+            "Xinjiang",
+            "Xi"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "human rights",
+              "frame": "human_rights",
+              "frame_label": "인권",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "인권 문제를 둘러싼 갈등"
+            },
+            {
+              "keyword": "sanctions",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 3,
+              "description": "제재를 나타내는 표현"
+            },
+            {
+              "keyword": "Xinjiang",
+              "frame": "human_rights",
+              "frame_label": "인권",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 3,
+              "description": "신장 인권 문제 관련 갈등"
+            },
+            {
+              "keyword": "Xi",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 8,
+          "relation_score": -8,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 3,
+          "article_score": -3,
+          "main_frame": "human_rights",
+          "main_frame_label": "인권"
+        },
+        {
+          "id": "21",
+          "period": "past",
+          "date": "2022-09-14",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "How could the US sanction China to deter Taiwan attack?",
+          "url": "https://www.reuters.com/world/how-could-us-sanction-china-deter-taiwan-attack-2022-09-14/",
+          "country_a": "United States",
+          "country_b": "China",
+          "summary": "미국 의회가 대만 문제와 관련해 중국에 부과할 수 있는 제재 방안을 검토한 기사다. sanctions, Taiwan, security 키워드가 포함된다.",
+          "detected_keywords": [
+            "sanctions",
+            "Taiwan"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "sanctions",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 3,
+              "description": "제재를 나타내는 표현"
+            },
+            {
+              "keyword": "Taiwan",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "대만 문제 관련 갈등 가능성"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 5,
+          "relation_score": -5,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 3,
+          "article_score": -3,
+          "main_frame": "diplomacy",
+          "main_frame_label": "외교"
+        },
+        {
+          "id": "22",
+          "period": "recent",
+          "date": "2025-07-29",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "US-China tariff truce holds for now, US says Trump has final say",
+          "url": "https://www.reuters.com/world/china/us-china-tariff-truce-holds-now-us-says-trump-has-final-say-2025-07-29/",
+          "country_a": "United States",
+          "country_b": "China",
+          "summary": "미국과 중국이 관세 휴전 연장을 모색한 기사다. tariff, truce, Trump 키워드가 포함된다.",
+          "detected_keywords": [
+            "tariff",
+            "truce",
+            "Trump"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "tariff",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "관세 갈등 또는 무역 분쟁을 나타내는 표현"
+            },
+            {
+              "keyword": "truce",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "갈등 완화 가능성을 나타내지만 완전한 협력은 아님"
+            },
+            {
+              "keyword": "Trump",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 2,
+          "relation_score": -2,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 2,
+          "article_score": -2,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        },
+        {
+          "id": "23",
+          "period": "recent",
+          "date": "2025-11-26",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "US extends tariff exclusions related to China tech transfer probe",
+          "url": "https://www.reuters.com/world/china/us-extends-tariff-exclusions-related-china-tech-transfer-probe-2025-11-26/",
+          "country_a": "United States",
+          "country_b": "China",
+          "summary": "미국이 일부 중국산 산업·의료 제품에 대한 관세 제외를 연장한 기사다. tariff exclusions, tariff, technology 키워드가 포함된다.",
+          "detected_keywords": [
+            "tariff exclusions",
+            "tariff"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "tariff exclusions",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 1,
+              "description": "관세 예외 연장으로 제한적 완화 신호"
+            },
+            {
+              "keyword": "tariff",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "관세 갈등 또는 무역 분쟁을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 1,
+          "conflict_score": 2,
+          "relation_score": -1,
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "tone_score": 0,
+          "intensity_score": 1,
+          "article_score": 0,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        },
+        {
+          "id": "24",
+          "period": "recent",
+          "date": "2026-06-17",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "US holds off blacklisting China's DeepSeek and more than 100 firms deemed security risks",
+          "url": "https://www.reuters.com/world/china/us-holds-off-blacklisting-chinas-deepseek-more-than-100-firms-deemed-security-2026-06-17/",
+          "country_a": "United States",
+          "country_b": "China",
+          "summary": "미국이 DeepSeek 등 중국 기업 블랙리스트 등재를 보류했지만 안보 우려가 핵심 배경으로 나타난 기사다. blacklist, security risks, AI 키워드가 포함된다.",
+          "detected_keywords": [
+            "security risks",
+            "blacklist"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "security risks",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "안보 위험 인식을 나타내는 표현"
+            },
+            {
+              "keyword": "blacklist",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 3,
+              "description": "경제·기술 제재를 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 5,
+          "relation_score": -5,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 3,
+          "article_score": -3,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        }
+      ]
+    },
+    "United States||Japan": {
+      "selected_pair": {
+        "country_a": "United States",
+        "country_b": "Japan",
+        "label": "United States - Japan"
+      },
+      "has_data": true,
+      "message": "",
+      "summary": {
+        "total_articles": 6,
+        "past_count": 3,
+        "recent_count": 3,
+        "past_average_score": 2.33,
+        "recent_average_score": 1.67,
+        "change": -0.66,
+        "dominant_frame": "economy",
+        "dominant_frame_label": "경제",
+        "final_relation_type": "cooperation",
+        "final_relation_label": "협력 중심 관계",
+        "change_direction_type": "neutral",
+        "change_direction_label": "큰 변화 없음 또는 혼합적 변화",
+        "interpretation": "United States - Japan의 최근 평균 기사 점수는 1.67로 협력 중심 관계로 해석된다. 과거 평균 2.33와 비교한 변화량은 -0.66이며, 전체 변화 방향은 큰 변화 없음 또는 혼합적 변화로 볼 수 있다. 이 결과는 기사 제목과 요약에 나타난 협력·갈등 키워드를 규칙표의 가중치로 계산한 교육용 분석 결과이다.",
+        "evidence_sentence": "주요 프레임은 경제이며, 기사 유형은 협력 5건, 중립 1건으로 분포한다. 분석에 자주 등장한 주요 점수 반영 키워드는 agreement, alliance, critical minerals, defense research, energy cooperation이다. context 키워드는 탐지 결과에는 표시하지만 관계 점수 계산에는 넣지 않았다."
+      },
+      "frame_counts": [
+        {
+          "name": "economy",
+          "label": "경제",
+          "count": 3,
+          "ratio": 50.0
+        },
+        {
+          "name": "security",
+          "label": "안보",
+          "count": 3,
+          "ratio": 50.0
+        }
+      ],
+      "relation_counts": [
+        {
+          "name": "cooperation",
+          "label": "협력",
+          "count": 5,
+          "ratio": 83.3
+        },
+        {
+          "name": "neutral",
+          "label": "중립",
+          "count": 1,
+          "ratio": 16.7
+        },
+        {
+          "name": "conflict",
+          "label": "갈등",
+          "count": 0,
+          "ratio": 0.0
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "Biden",
+          "count": 2,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "agreement",
+          "count": 2,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "alliance",
+          "count": 2,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "critical minerals",
+          "count": 2,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "defense research",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "energy cooperation",
+          "count": 1,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "rare earths",
+          "count": 1,
+          "frame": "economy",
+          "frame_label": "경제",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "security cooperation",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 2
+        },
+        {
+          "keyword": "strengthen",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "score_weight": 1
+        },
+        {
+          "keyword": "summit",
+          "count": 1,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "score_weight": 1
+        }
+      ],
+      "articles": [
+        {
+          "id": "25",
+          "period": "past",
+          "date": "2021-01-27",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "Suga says he and Biden agree to strengthen US-Japan alliance",
+          "url": "https://www.reuters.com/world/china/suga-says-he-biden-agree-strengthen-us-japan-alliance-2021-01-27/",
+          "country_a": "United States",
+          "country_b": "Japan",
+          "summary": "스가 총리와 바이든 대통령이 통화에서 미일동맹 강화를 확인한 기사다. strengthen, alliance, Biden 키워드가 포함된다.",
+          "detected_keywords": [
+            "strengthen",
+            "alliance",
+            "Biden"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "strengthen",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 1,
+              "description": "관계 또는 협력 강화를 나타내는 표현"
+            },
+            {
+              "keyword": "alliance",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "동맹 관계를 나타내는 표현"
+            },
+            {
+              "keyword": "Biden",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 3,
+          "conflict_score": 0,
+          "relation_score": 3,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "26",
+          "period": "past",
+          "date": "2021-04-16",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "Biden to welcome Japan's Suga as first guest, key ally in China strategy",
+          "url": "https://www.reuters.com/world/china/biden-welcome-japans-suga-first-guest-key-ally-china-strategy-2021-04-16/",
+          "country_a": "United States",
+          "country_b": "Japan",
+          "summary": "바이든과 스가가 중국 견제를 중심으로 미일 공조를 강조한 기사다. alliance, China strategy, summit 키워드가 포함된다.",
+          "detected_keywords": [
+            "alliance",
+            "summit",
+            "Biden"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "alliance",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "동맹 관계를 나타내는 표현"
+            },
+            {
+              "keyword": "summit",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "neutral",
+              "relation_label": "중립",
+              "polarity": "neutral",
+              "score_weight": 1,
+              "description": "정상회담을 나타내지만 방향성은 문맥 의존"
+            },
+            {
+              "keyword": "Biden",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 2,
+          "conflict_score": 0,
+          "relation_score": 2,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "27",
+          "period": "past",
+          "date": "2022-01-06",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "US, Japan launch new defense research and development agreement",
+          "url": "https://www.reuters.com/world/asia-pacific/us-japan-launch-new-defense-research-development-agreement-2022-01-06/",
+          "country_a": "United States",
+          "country_b": "Japan",
+          "summary": "미국과 일본이 중국 견제를 위해 방위협력을 강화하고 연구개발 협정을 추진한 기사다. defense research, agreement, security cooperation 키워드가 포함된다.",
+          "detected_keywords": [
+            "security cooperation",
+            "defense research",
+            "agreement"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "security cooperation",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "안보 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "defense research",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "방위 연구개발 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "agreement",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "합의 또는 협정을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 6,
+          "conflict_score": 0,
+          "relation_score": 6,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 3,
+          "article_score": 3,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "28",
+          "period": "recent",
+          "date": "2025-07-23",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "Japan trade deal breaks US tariff template",
+          "url": "https://www.reuters.com/commentary/breakingviews/japan-trade-deal-breaks-us-tariff-template-2025-07-23/",
+          "country_a": "United States",
+          "country_b": "Japan",
+          "summary": "미국과 일본의 무역 합의가 일본 자동차 관세 부담을 낮추는 방향으로 정리된 기사다. trade deal, tariff, autos 키워드가 포함된다.",
+          "detected_keywords": [
+            "trade deal",
+            "tariff"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "trade deal",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "무역 합의를 나타내는 표현"
+            },
+            {
+              "keyword": "tariff",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "관세 갈등 또는 무역 분쟁을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 2,
+          "conflict_score": 2,
+          "relation_score": 0,
+          "relation_type": "neutral",
+          "relation_label": "중립",
+          "tone_score": 0,
+          "intensity_score": 1,
+          "article_score": 0,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        },
+        {
+          "id": "29",
+          "period": "recent",
+          "date": "2026-03-19",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "US, Japan to focus rare earths cooperation on select group of minerals first",
+          "url": "https://www.reuters.com/business/aerospace-defense/us-japan-focus-rare-earths-cooperation-select-group-minerals-first-2026-03-19/",
+          "country_a": "United States",
+          "country_b": "Japan",
+          "summary": "미국과 일본이 희토류·핵심광물 공급망 협력을 추진한 기사다. rare earths, critical minerals, cooperation 키워드가 포함된다.",
+          "detected_keywords": [
+            "critical minerals",
+            "rare earths"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "critical minerals",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "핵심광물 공급망 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "rare earths",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "희토류 공급망 협력을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 4,
+          "conflict_score": 0,
+          "relation_score": 4,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 2,
+          "article_score": 2,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        },
+        {
+          "id": "30",
+          "period": "recent",
+          "date": "2026-03-19",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "Japan, US announce energy projects and critical minerals action plan",
+          "url": "https://www.reuters.com/business/energy/japan-us-announce-energy-projects-critical-minerals-action-plan-2026-03-19/",
+          "country_a": "United States",
+          "country_b": "Japan",
+          "summary": "미국과 일본이 에너지 프로젝트와 핵심광물 협력 계획을 발표한 기사다. energy cooperation, critical minerals, agreement 키워드가 포함된다.",
+          "detected_keywords": [
+            "energy cooperation",
+            "critical minerals",
+            "agreement"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "energy cooperation",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "에너지 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "critical minerals",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "핵심광물 공급망 협력을 나타내는 표현"
+            },
+            {
+              "keyword": "agreement",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "cooperation",
+              "relation_label": "협력",
+              "polarity": "positive",
+              "score_weight": 2,
+              "description": "합의 또는 협정을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 6,
+          "conflict_score": 0,
+          "relation_score": 6,
+          "relation_type": "cooperation",
+          "relation_label": "협력",
+          "tone_score": 1,
+          "intensity_score": 3,
+          "article_score": 3,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        }
+      ]
+    },
+    "China||Japan": {
+      "selected_pair": {
+        "country_a": "China",
+        "country_b": "Japan",
+        "label": "China - Japan"
+      },
+      "has_data": true,
+      "message": "",
+      "summary": {
+        "total_articles": 6,
+        "past_count": 3,
+        "recent_count": 3,
+        "past_average_score": -2.67,
+        "recent_average_score": -2.67,
+        "change": 0.0,
+        "dominant_frame": "security",
+        "dominant_frame_label": "안보",
+        "final_relation_type": "conflict",
+        "final_relation_label": "갈등 중심 관계",
+        "change_direction_type": "neutral",
+        "change_direction_label": "큰 변화 없음 또는 혼합적 변화",
+        "interpretation": "China - Japan의 최근 평균 기사 점수는 -2.67로 갈등 중심 관계로 해석된다. 과거 평균 -2.67와 비교한 변화량은 0.00이며, 전체 변화 방향은 큰 변화 없음 또는 혼합적 변화로 볼 수 있다. 이 결과는 기사 제목과 요약에 나타난 협력·갈등 키워드를 규칙표의 가중치로 계산한 교육용 분석 결과이다.",
+        "evidence_sentence": "주요 프레임은 안보이며, 기사 유형은 갈등 6건으로 분포한다. 분석에 자주 등장한 주요 점수 반영 키워드는 Taiwan, Taiwan Strait, diplomatic dispute, East China Sea, Senkaku이다. context 키워드는 탐지 결과에는 표시하지만 관계 점수 계산에는 넣지 않았다."
+      },
+      "frame_counts": [
+        {
+          "name": "security",
+          "label": "안보",
+          "count": 4,
+          "ratio": 66.7
+        },
+        {
+          "name": "diplomacy",
+          "label": "외교",
+          "count": 1,
+          "ratio": 16.7
+        },
+        {
+          "name": "economy",
+          "label": "경제",
+          "count": 1,
+          "ratio": 16.7
+        }
+      ],
+      "relation_counts": [
+        {
+          "name": "cooperation",
+          "label": "협력",
+          "count": 0,
+          "ratio": 0.0
+        },
+        {
+          "name": "neutral",
+          "label": "중립",
+          "count": 0,
+          "ratio": 0.0
+        },
+        {
+          "name": "conflict",
+          "label": "갈등",
+          "count": 6,
+          "ratio": 100.0
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "Kishida",
+          "count": 2,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "Taiwan",
+          "count": 2,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "Taiwan Strait",
+          "count": 2,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 3
+        },
+        {
+          "keyword": "diplomatic dispute",
+          "count": 2,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "Biden",
+          "count": 1,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "East China Sea",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "Senkaku",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        },
+        {
+          "keyword": "Xi",
+          "count": 1,
+          "frame": "context",
+          "frame_label": "맥락",
+          "relation_type": "context",
+          "relation_label": "context",
+          "score_weight": 0
+        },
+        {
+          "keyword": "coercion",
+          "count": 1,
+          "frame": "security",
+          "frame_label": "안보",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 3
+        },
+        {
+          "keyword": "dispute",
+          "count": 1,
+          "frame": "diplomacy",
+          "frame_label": "외교",
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "score_weight": 2
+        }
+      ],
+      "articles": [
+        {
+          "id": "31",
+          "period": "past",
+          "date": "2021-10-05",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "Biden promised US commitment to defending Senkaku islands, Japan PM Kishida says",
+          "url": "https://www.reuters.com/world/asia-pacific/biden-promised-us-commitment-defending-senkaku-islands-japan-pm-kishida-2021-10-05/",
+          "country_a": "China",
+          "country_b": "Japan",
+          "summary": "일본이 중국의 대만·센카쿠 관련 강경 태도에 대응해 안보 우려를 드러낸 기사다. Senkaku, East China Sea, security 키워드가 포함된다.",
+          "detected_keywords": [
+            "East China Sea",
+            "Senkaku",
+            "Kishida",
+            "Biden"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "East China Sea",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "동중국해 안보 갈등"
+            },
+            {
+              "keyword": "Senkaku",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "센카쿠 또는 댜오위다오 영유권 갈등"
+            },
+            {
+              "keyword": "Kishida",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            },
+            {
+              "keyword": "Biden",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 4,
+          "relation_score": -4,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 2,
+          "article_score": -2,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "33",
+          "period": "past",
+          "date": "2022-05-05",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "Peace, stability in Taiwan Strait is critical, Japanese PM says",
+          "url": "https://www.reuters.com/world/asia-pacific/peace-stability-taiwan-strait-is-critical-japanese-pm-2022-05-05/",
+          "country_a": "China",
+          "country_b": "Japan",
+          "summary": "일본 총리가 대만해협 안정의 중요성을 말하자 중국이 일본의 군사력 강화 명분이라고 비판한 기사다. Taiwan Strait, security, Japan 키워드가 포함된다.",
+          "detected_keywords": [
+            "Taiwan Strait",
+            "Taiwan"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "Taiwan Strait",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 3,
+              "description": "대만해협 안보 갈등을 나타내는 표현"
+            },
+            {
+              "keyword": "Taiwan",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "대만 문제 관련 갈등 가능성"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 5,
+          "relation_score": -5,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 3,
+          "article_score": -3,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "32",
+          "period": "past",
+          "date": "2022-11-17",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "Japan PM says conveyed concerns to China's Xi about peace in Taiwan Strait",
+          "url": "https://www.reuters.com/world/asia-pacific/japan-pm-says-conveyed-concerns-chinas-xi-about-peace-taiwan-strait-2022-11-17/",
+          "country_a": "China",
+          "country_b": "Japan",
+          "summary": "시진핑과 기시다 회담에서 대만해협과 동중국해 안보 우려가 제기된 기사다. Taiwan Strait, Xi, Kishida 키워드가 포함된다.",
+          "detected_keywords": [
+            "Taiwan Strait",
+            "Kishida",
+            "Taiwan",
+            "Xi"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "Taiwan Strait",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 3,
+              "description": "대만해협 안보 갈등을 나타내는 표현"
+            },
+            {
+              "keyword": "Kishida",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            },
+            {
+              "keyword": "Taiwan",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "대만 문제 관련 갈등 가능성"
+            },
+            {
+              "keyword": "Xi",
+              "frame": "context",
+              "frame_label": "맥락",
+              "relation_type": "context",
+              "relation_label": "context",
+              "polarity": "context",
+              "score_weight": 0,
+              "description": "인물명으로 관계 점수에는 반영하지 않음"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 5,
+          "relation_score": -5,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 3,
+          "article_score": -3,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        },
+        {
+          "id": "34",
+          "period": "recent",
+          "date": "2025-11-19",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "China to suspend imports of Japanese seafood amid diplomatic dispute, Kyodo reports",
+          "url": "https://www.reuters.com/world/asia-pacific/china-suspend-imports-japanese-seafood-amid-diplomatic-dispute-kyodo-reports-2025-11-19/",
+          "country_a": "China",
+          "country_b": "Japan",
+          "summary": "일본 총리의 대만 관련 발언 이후 중국이 일본산 수산물 수입 제한을 시사하며 외교 갈등이 경제 문제로 번진 기사다. suspend imports, seafood, diplomatic dispute 키워드가 포함된다.",
+          "detected_keywords": [
+            "diplomatic dispute",
+            "suspend imports",
+            "dispute",
+            "seafood"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "diplomatic dispute",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "외교 분쟁을 나타내는 표현"
+            },
+            {
+              "keyword": "suspend imports",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 3,
+              "description": "수입 중단 또는 경제보복을 나타내는 표현"
+            },
+            {
+              "keyword": "dispute",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "분쟁 또는 갈등을 나타내는 표현"
+            },
+            {
+              "keyword": "seafood",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "수산물 수입 제한 등 경제 갈등 가능성"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 9,
+          "relation_score": -9,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 3,
+          "article_score": -3,
+          "main_frame": "economy",
+          "main_frame_label": "경제"
+        },
+        {
+          "id": "35",
+          "period": "recent",
+          "date": "2025-11-20",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "China says trade cooperation with Japan has taken a great hit",
+          "url": "https://www.reuters.com/world/china/china-says-trade-cooperation-with-japan-taken-great-hit-2025-11-20/",
+          "country_a": "China",
+          "country_b": "Japan",
+          "summary": "중국이 일본과의 무역 협력이 큰 타격을 받았다고 밝힌 기사다. trade cooperation, great hit, diplomatic dispute 키워드가 포함된다.",
+          "detected_keywords": [
+            "diplomatic dispute",
+            "great hit"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "diplomatic dispute",
+              "frame": "diplomacy",
+              "frame_label": "외교",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "외교 분쟁을 나타내는 표현"
+            },
+            {
+              "keyword": "great hit",
+              "frame": "economy",
+              "frame_label": "경제",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "무역 협력 타격을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 4,
+          "relation_score": -4,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 2,
+          "article_score": -2,
+          "main_frame": "diplomacy",
+          "main_frame_label": "외교"
+        },
+        {
+          "id": "36",
+          "period": "recent",
+          "date": "2026-02-20",
+          "source": "Reuters",
+          "source_type": "news",
+          "title": "Japan PM Takaichi warns of China coercion, vows security overhaul",
+          "url": "https://www.reuters.com/world/china/japan-pm-takaichi-warns-china-coercion-vows-security-overhaul-2026-02-20/",
+          "country_a": "China",
+          "country_b": "Japan",
+          "summary": "일본 총리가 중국의 강압을 경고하고 안보 전략 개편을 예고한 기사다. coercion, security overhaul, China 키워드가 포함된다.",
+          "detected_keywords": [
+            "security overhaul",
+            "coercion"
+          ],
+          "detected_keyword_details": [
+            {
+              "keyword": "security overhaul",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 2,
+              "description": "안보 전략 개편과 긴장 상승을 나타내는 표현"
+            },
+            {
+              "keyword": "coercion",
+              "frame": "security",
+              "frame_label": "안보",
+              "relation_type": "conflict",
+              "relation_label": "갈등",
+              "polarity": "negative",
+              "score_weight": 3,
+              "description": "강압 또는 안보 압박을 나타내는 표현"
+            }
+          ],
+          "cooperation_score": 0,
+          "conflict_score": 5,
+          "relation_score": -5,
+          "relation_type": "conflict",
+          "relation_label": "갈등",
+          "tone_score": -1,
+          "intensity_score": 3,
+          "article_score": -3,
+          "main_frame": "security",
+          "main_frame_label": "안보"
+        }
+      ]
+    }
+  }
+}

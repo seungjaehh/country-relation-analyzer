@@ -25,22 +25,22 @@ const frameColors = {
 const leaderProfiles = {
     "South Korea": {
         label: "대한민국",
-        image: "/static/images/leaders/south-korea.jpg",
+        image: "static/images/leaders/south-korea.jpg",
         initials: "KR",
     },
     "United States": {
         label: "미국",
-        image: "/static/images/leaders/united-states.jpg",
+        image: "static/images/leaders/united-states.jpg",
         initials: "US",
     },
     China: {
         label: "중국",
-        image: "/static/images/leaders/china.jpg",
+        image: "static/images/leaders/china.jpg",
         initials: "CN",
     },
     Japan: {
         label: "일본",
-        image: "/static/images/leaders/japan.jpg",
+        image: "static/images/leaders/japan.jpg",
         initials: "JP",
     },
 };
@@ -428,13 +428,16 @@ function renderAnalysis(data) {
     renderCharts(data);
 }
 
+let analysisDatabase = null;
+
 async function loadPairs() {
-    const response = await fetch("/api/pairs");
+    const response = await fetch("data/analysis_results.json");
     if (!response.ok) {
         throw new Error("국가쌍 목록을 불러오지 못했습니다.");
     }
 
     const data = await response.json();
+    analysisDatabase = data;
     pairSelect.innerHTML = "";
 
     data.pairs.forEach((pair) => {
@@ -451,17 +454,14 @@ async function analyzeSelectedPair() {
     analyzeButton.textContent = "분석 중";
 
     try {
-        const response = await fetch("/api/analyze", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(selectedPairPayload()),
-        });
-        const data = await response.json();
+        if (!analysisDatabase) {
+            throw new Error("분석 데이터를 불러오지 못했습니다.");
+        }
 
-        if (!response.ok) {
-            throw new Error(data.error || "분석 요청에 실패했습니다.");
+        const pair = selectedPairPayload();
+        const data = analysisDatabase.results[`${pair.country_a}||${pair.country_b}`];
+        if (!data) {
+            throw new Error("해당 국가쌍의 데이터가 없습니다");
         }
 
         renderAnalysis(data);
@@ -478,3 +478,4 @@ analyzeButton.addEventListener("click", analyzeSelectedPair);
 loadPairs()
     .then(analyzeSelectedPair)
     .catch((error) => showError(error.message));
+

@@ -34,19 +34,46 @@
                 <div class="method-steps">
                     <article class="method-step"><b>01 · 선택</b><strong>두 국가와 기간</strong><p>35개 국가 중 서로 다른 두 나라와 최근 7일·30일·90일을 고릅니다. 순서를 바꿔도 같은 국가쌍으로 처리합니다.</p></article>
                     <article class="method-step"><b>02 · 검색</b><strong>공개 뉴스 검색</strong><p>GDELT DOC에서 두 나라가 함께 언급된 기사를 최대 250건까지 요청합니다. 응답이 없으면 Google News의 영어·한국어 RSS를 보조로 사용합니다.</p></article>
-                    <article class="method-step"><b>03 · 분류</b><strong>제목의 표현 탐지</strong><p>협력·갈등 키워드에 가중치를 적용합니다. 제목의 의제 키워드는 안보·무역·외교 등으로 묶습니다.</p></article>
-                    <article class="method-step"><b>04 · 집계</b><strong>표본 안의 신호 요약</strong><p>분류된 기사 수, 매체 수, 의제와 협력·갈등 비율을 집계하고 원문 링크를 함께 제공합니다.</p></article>
+                    <article class="method-step"><b>03 · 분류</b><strong>신호·행동·주제 분리</strong><p>관계 방향 신호와 관계 행동, 기사 주제를 별도 축으로 분류합니다. 행동·주제는 복수 태그가 가능합니다.</p></article>
+                    <article class="method-step"><b>04 · 집계</b><strong>표본 안의 신호 요약</strong><p>분류된 기사 수, 매체 수, 행동 유형과 의제를 집계합니다. 직접 신호가 적으면 우세 판정을 보류합니다.</p></article>
                 </div>
             </section>
 
             <section class="method-section" aria-labelledby="scoreTitle">
                 <h2 id="scoreTitle">관계 신호와 점수</h2>
-                <p>각 제목에서 협력 키워드 점수와 갈등 키워드 점수를 따로 합산합니다. 협력 점수가 더 크면 ‘협력’, 갈등 점수가 더 크면 ‘갈등’, 같으면 ‘혼합·중립’으로 분류합니다.</p>
+                <p>기사 제목과 제공처가 함께 준 요약에서 협력·갈등 표현을 대소문자 구분 없이 찾습니다. 영어 단어는 단어 경계를 적용해 attack과 attacked가 중복 점수로 잡히지 않게 하고, security cooperation처럼 긴 표현 안의 짧은 키워드 중복도 줄입니다. 키워드별 가중치를 합산하고, 양쪽 표현이 모두 있으면 ‘복합 신호’로 분류합니다. 한쪽 표현만 있으면 가중치 합계 2점 이상일 때 그 방향으로 분류하며, 어느 쪽도 없거나 2점 미만이면 ‘관계 신호 미발견’입니다.</p>
                 <div class="method-callout">
                     <strong>표시 지수 계산</strong>
-                    <p>(협력으로 분류된 기사 수 − 갈등으로 분류된 기사 수) ÷ 전체 기사 수 × 100. 중립 기사는 분모에는 포함되고 분자에는 포함되지 않습니다. 지수는 검색된 표본 안의 제목 분포를 나타냅니다.</p>
+                    <p>(협력 기사 수 − 갈등 기사 수) ÷ 전체 기사 수 × 100. 복합 신호와 신호 미발견도 분모에는 들어갑니다. 분류 가능한 신호(협력·갈등·복합)가 25% 미만이거나 기사 수가 5건 미만이면 협력·갈등 우세 판정을 보류합니다.</p>
                 </div>
-                <p>따라서 ‘중립’은 양국 관계가 실제로 중립이라는 뜻이 아닙니다. 제목에서 등록된 협력·갈등 표현이 없거나 두 신호가 같았다는 뜻입니다.</p>
+                <p>‘관계 신호 미발견’은 실제 중립이라는 뜻이 아닙니다. 등록된 표현을 찾지 못했거나, 기사 제목·요약만으로 방향을 읽을 근거가 부족하다는 뜻입니다.</p>
+            </section>
+
+            <section class="method-section" aria-labelledby="behaviorTitle">
+                <h2 id="behaviorTitle">관계 행동 분류 기준</h2>
+                <p>행동 유형은 협력·갈등과 다른 축입니다. 한 기사에 여러 행동 유형이 붙을 수 있고, 행동 단어만으로 긍정·부정을 단정하지 않습니다.</p>
+                <ul>
+                    <li><strong>대화·협상:</strong> talks, negotiation, dialogue, meeting, summit, envoy 및 회담·협상·대화·중재. 대화를 했다는 이유만으로 합의나 협력으로 보지 않습니다.</li>
+                    <li><strong>경제·교류:</strong> trade, investment, exports, imports, supply chain 및 무역·투자·수출입·공급망. 교류 분야를 뜻하며 관계가 우호적이라는 판정은 아닙니다.</li>
+                    <li><strong>안보 협력 / 공동 행동·지원:</strong> security cooperation, military aid, intelligence sharing, coordinated, assistance 및 안보 협력·군사 지원·정보 공유·공동 대응·원조.</li>
+                    <li><strong>경쟁·전략 대립:</strong> competition, rivalry, influence, arms race 및 경쟁·패권·영향력·군비 경쟁. 군사 충돌과 구별합니다.</li>
+                    <li><strong>압박·제재:</strong> sanction, tariff, export control, restriction, threat 및 제재·관세·수출 통제·제한·위협. 검토·예고와 실제 시행은 현재 키워드 방식만으로 완전히 구별하지 못합니다.</li>
+                    <li><strong>공식 입장·외교 발언:</strong> statement, warn, reject, criticize, accuse 및 성명·경고·거부·비판·비난. 발언의 사실과 발언 내용의 진실성은 별개입니다.</li>
+                    <li><strong>안보·군사 활동:</strong> military, defense, exercise, troops, weapons 및 군사·국방·훈련·병력·무기. 이 태그만으로 무력 충돌이라고 보지 않습니다.</li>
+                    <li><strong>무력 충돌·위기:</strong> attack, strike, missile, invasion, clash, deployment 및 공격·공습·미사일·침공·충돌·파병. 기사에서 사건과 양국의 직접 관계가 확인되는지 원문 확인이 필요합니다.</li>
+                    <li><strong>긴장 완화·해결:</strong> ceasefire, truce, withdrawal, prisoner exchange, peace deal 및 휴전·철수·포로 교환·평화 합의. 휴전이나 협상도 갈등이 있었다는 사실과 함께 읽어야 합니다.</li>
+                    <li><strong>인도주의·민간 영향:</strong> humanitarian, civilian, refugee, evacuation 및 인도주의·민간인·난민·대피·구호.</li>
+                </ul>
+                <div class="method-callout">
+                    <strong>주제 태그는 별도 분류</strong>
+                    <p>안보·군사, 경제·무역, 외교·정상회담, 영토·해양, 기술·에너지, 인권·역사, 보건·환경·재난 중 관련 항목을 복수로 표시합니다. 예를 들어 ‘대화·협상 + 안보·군사’처럼 행동과 주제를 함께 읽습니다. 기사별 기준 표현과 가중치도 기사 목록에 표시합니다.</p>
+                </div>
+            </section>
+
+            <section class="method-section" aria-labelledby="stageTitle">
+                <h2 id="stageTitle">사건 단계 표현</h2>
+                <p>검토·제안·예고, 합의·서명·발표, 시행·발생, 주장·의혹·보도, 진행·지속 중, 중단·철회·취소 표현을 행동 유형과 별도로 태그합니다. 한 기사 안에 복수의 단계 표현이 같이 표시될 수 있습니다.</p>
+                <p>이 역시 문구 탐지이며 사건 타임라인을 완전히 해석하는 것은 아닙니다. 예를 들어 ‘제재 검토’는 제재 시행으로 계산하지 않고, ‘보도에 따르면’이 붙은 주장은 검증된 사실로 취급하지 않아야 합니다.</p>
             </section>
 
             <section class="method-section" aria-labelledby="quantityTitle">
@@ -73,7 +100,8 @@
             <section class="method-section" aria-labelledby="limitsTitle">
                 <h2 id="limitsTitle">해석할 때 기억할 점</h2>
                 <ul>
-                    <li>본문 전체가 아니라 기사 제목에 등록된 단어가 있는지 봅니다. 부정·반어·인용·맥락을 충분히 이해하지 못합니다.</li>
+                    <li>기사 제목과 제공처 요약의 등록된 단어를 확인합니다. 부정·반어·인용·행위자·대상·실제 조치 여부를 완전히 이해하지 못합니다.</li>
+                    <li>행위자와 대상의 방향, 계획·합의·시행·취소 같은 사건 상태는 아직 구조적으로 추출하지 않습니다.</li>
                     <li>같은 사건을 여러 매체가 보도하거나 같은 기사가 재게시되면 표본이 특정 이슈에 쏠릴 수 있습니다.</li>
                     <li>영어·한국어 검색 결과는 전체 현지 보도를 대표하지 않습니다.</li>
                     <li>결과는 기사 원문과 함께 확인해야 하며 외교 관계의 공식 평가나 예측으로 사용하면 안 됩니다.</li>

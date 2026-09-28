@@ -44,31 +44,55 @@ const countries = [
 
 const relationTerms = {
     cooperation: [
-        ["security cooperation", 3], ["trade agreement", 3], ["joint statement", 3],
-        ["cooperation", 2], ["cooperate", 2], ["agreed to", 2], ["agreement", 2],
-        ["partnership", 2], ["alliance", 2], ["ceasefire", 2], ["cease-fire", 2],
-        ["peace talks", 2], ["reopen talks", 2], ["investment pact", 2], ["boost ties", 2],
-        ["협력 강화", 3], ["안보 협력", 3], ["무역 협정", 3], ["공동 성명", 3],
-        ["협력", 2], ["합의", 2], ["협정", 2], ["관계 개선", 2], ["관계 정상화", 2], ["휴전", 2],
+        ["security cooperation", 3], ["trade agreement", 3], ["joint statement", 3], ["joint action", 3],
+        ["cooperation", 2], ["cooperate", 2], ["agreed to", 2], ["agreement", 2], ["signed a deal", 3],
+        ["partnership", 2], ["alliance", 2], ["military aid", 2], ["intelligence sharing", 3],
+        ["investment pact", 2], ["boost ties", 2],
+        ["협력 강화", 3], ["안보 협력", 3], ["무역 협정", 3], ["공동 성명", 3], ["공동 대응", 3],
+        ["협력", 2], ["합의", 2], ["협정", 2], ["관계 개선", 2], ["관계 정상화", 2], ["군사 지원", 2], ["정보 공유", 3],
     ],
     conflict: [
-        ["military strike", 3], ["airstrike", 3], ["sanctions", 3], ["retaliation", 3],
-        ["invasion", 3], ["attacked", 3], ["attack", 2], ["clash", 2], ["threat", 2],
-        ["tariff", 2], ["trade war", 3], ["dispute", 2], ["tensions", 2], ["condemn", 2],
-        ["missile test", 2], ["ban", 2], ["expel", 2], ["diplomatic row", 2], ["protest", 1],
+        ["military strike", 3], ["airstrike", 3], ["sanctions", 3], ["sanctioned", 3], ["retaliation", 3],
+        ["invasion", 3], ["attacked", 3], ["attack", 2], ["clash", 2], ["threat", 2], ["threatened", 2],
+        ["tariff", 2], ["trade war", 3], ["dispute", 2], ["tensions", 2], ["condemn", 2], ["condemned", 2],
+        ["missile test", 2], ["export controls", 2], ["restrictions", 2], ["expel", 2], ["diplomatic row", 2], ["protest", 1],
         ["공습", 3], ["군사 공격", 3], ["제재", 3], ["보복", 3], ["침공", 3], ["공격", 2],
         ["충돌", 2], ["위협", 2], ["관세", 2], ["무역 전쟁", 3], ["분쟁", 2], ["긴장", 2],
-        ["규탄", 2], ["미사일 시험", 2], ["갈등", 2], ["항의", 1],
+        ["규탄", 2], ["수출 통제", 2], ["제한 조치", 2], ["미사일 시험", 2], ["갈등", 2], ["항의", 1],
     ],
 };
 
+const behaviorTerms = {
+    "대화·협상": ["talks", "negotiation", "negotiations", "dialogue", "meeting", "summit", "envoy", "mediator", "협상", "대화", "회담", "정상회담", "특사", "중재"],
+    "경제·교류": ["trade", "investment", "invest", "exports", "export", "imports", "import", "business ties", "economic ties", "supply chain", "무역", "투자", "수출", "수입", "경제 협력", "공급망"],
+    "안보 협력": ["security cooperation", "military aid", "intelligence sharing", "joint defense", "alliance", "안보 협력", "군사 지원", "정보 공유", "공동 방위", "동맹"],
+    "공동 행동·지원": ["joint action", "coordinated", "assistance", "humanitarian aid", "provided aid", "공동 대응", "공조", "지원", "원조", "구호"],
+    "경쟁·전략 대립": ["competition", "compete", "competing", "rivalry", "strategic rival", "influence", "arms race", "경쟁", "패권", "세력 확대", "전략 경쟁", "군비 경쟁"],
+    "압박·제재": ["sanction", "sanctions", "tariff", "export control", "restriction", "restrictions", "ban", "pressure", "threat", "제재", "관세", "수출 통제", "제한", "압박", "위협"],
+    "공식 입장·외교 발언": ["statement", "announced", "urged", "warned", "rejected", "criticized", "condemned", "denied", "accused", "said", "says", "성명", "발표", "촉구", "경고", "거부", "비판", "규탄", "부인", "비난"],
+    "안보·군사 활동": ["military", "defense", "defence", "exercise", "drill", "troops", "weapons", "air defense", "military aid", "군사", "국방", "훈련", "병력", "무기", "방공", "군사 지원"],
+    "무력 충돌·위기": ["attack", "strike", "airstrike", "missile", "invasion", "clash", "deploy", "deployed", "deployment", "war", "공격", "공습", "미사일", "침공", "충돌", "파병", "전쟁"],
+    "긴장 완화·해결": ["ceasefire", "cease-fire", "truce", "withdraw", "withdrawal", "prisoner exchange", "peace deal", "de-escalation", "휴전", "철수", "포로 교환", "평화 합의", "긴장 완화", "무력 충돌 중단"],
+    "인도주의·민간 영향": ["humanitarian", "civilian", "refugee", "evacuation", "humanitarian aid", "인도주의", "민간인", "난민", "대피", "구호"],
+};
+
+const eventStageTerms = {
+    "검토·제안·예고": ["plan", "plans", "consider", "considers", "considering", "propose", "proposed", "proposal", "review", "weigh", "weighs", "threaten", "threatened", "예정", "검토", "제안", "추진", "위협", "가능성"],
+    "합의·서명·발표": ["agreed", "agreement", "signed", "signing", "announced", "approved", "deal", "합의", "협정", "서명", "발표", "승인", "타결"],
+    "시행·발생": ["imposed", "implemented", "launched", "carried out", "deployed", "attacked", "struck", "began", "발효", "시행", "실시", "공격", "배치", "발사", "시작"],
+    "주장·의혹·보도": ["alleged", "alleges", "claimed", "claims", "reportedly", "according to", "accused", "주장", "의혹", "혐의", "보도에 따르면", "발표에 따르면"],
+    "진행·지속 중": ["ongoing", "continues", "continue", "continued", "currently", "remains", "진행 중", "계속", "현재 진행", "지속"],
+    "중단·철회·취소": ["withdrew", "withdrawal", "suspended", "halted", "cancelled", "canceled", "reversed", "철회", "중단", "취소", "번복"],
+};
+
 const issueTerms = {
-    "안보·군사": ["military", "defense", "defence", "security", "missile", "nuclear", "navy", "안보", "군사", "미사일", "핵"],
-    "경제·무역": ["trade", "tariff", "investment", "supply chain", "export", "sanction", "경제", "무역", "관세", "투자", "공급망", "수출"],
-    "외교·정상회담": ["diplomacy", "diplomatic", "summit", "minister", "president", "ambassador", "talks", "외교", "정상회담", "장관", "대통령", "회담"],
-    "영토·해양": ["border", "territory", "island", "sea", "strait", "territorial", "영토", "국경", "해양", "섬", "해협"],
-    "기술·에너지": ["technology", "chip", "semiconductor", "energy", "climate", "technology", "기술", "반도체", "에너지", "기후"],
-    "인권·역사": ["human rights", "forced labor", "history", "rights", "인권", "강제동원", "역사", "과거사"],
+    "안보·군사": ["military", "defense", "defence", "security", "missile", "nuclear", "navy", "troops", "안보", "군사", "미사일", "핵", "병력"],
+    "경제·무역": ["trade", "tariff", "investment", "supply chain", "export", "import", "sanction", "경제", "무역", "관세", "투자", "공급망", "수출", "수입", "제재"],
+    "외교·정상회담": ["diplomacy", "diplomatic", "summit", "minister", "president", "ambassador", "talks", "negotiation", "외교", "정상회담", "장관", "대통령", "회담", "협상"],
+    "영토·해양": ["border", "territory", "island", "sea", "strait", "territorial", "airspace", "영토", "국경", "해양", "섬", "해협", "영공"],
+    "기술·에너지": ["technology", "chip", "semiconductor", "energy", "climate", "artificial intelligence", "기술", "반도체", "에너지", "기후", "인공지능"],
+    "인권·역사": ["human rights", "forced labor", "history", "rights", "refugee", "인권", "강제동원", "역사", "과거사", "난민"],
+    "보건·환경·재난": ["health", "pandemic", "climate", "environment", "disaster", "보건", "감염병", "환경", "기후", "재난"],
 };
 
 const countryASelect = document.getElementById("countryA");
@@ -130,7 +154,7 @@ function buildRequestUrl(countryA, countryB, period) {
 
 function cacheKey(countryA, countryB, period) {
     const [first, second] = canonicalPair(countryA, countryB);
-    return `relation-analysis-2:v2:${first.value}|${second.value}|${period}`;
+    return `relation-analysis-2:v3:${first.value}|${second.value}|${period}`;
 }
 
 function canonicalPair(countryA, countryB) {
@@ -170,15 +194,23 @@ function normalizeArticle(raw, index) {
     const url = safeArticleUrl(raw.url);
     let domain = String(raw.domain || "").trim();
     if (!domain && url) domain = new URL(url).hostname.replace(/^www\./, "");
+    const title = String(raw.title || "제목 없음").trim();
+    const excerpt = plainText(raw.description || raw.summary || "").slice(0, 700);
     return {
-        id: url || `${raw.title || "article"}-${index}`,
-        title: String(raw.title || "제목 없음").trim(),
+        id: url || `${title}-${index}`,
+        title,
+        excerpt,
+        analysisText: [title, excerpt].filter(Boolean).join(" "),
         url,
         domain: domain || "출처 미상",
         date: parseDate(raw.seendate),
         language: String(raw.language || "미상"),
         sourceCountry: String(raw.sourcecountry || ""),
     };
+}
+
+function plainText(value) {
+    return new DOMParser().parseFromString(String(value || ""), "text/html").body.textContent.replace(/\s+/g, " ").trim();
 }
 
 function safeArticleUrl(value) {
@@ -189,21 +221,44 @@ function safeArticleUrl(value) {
 }
 
 function findMatches(text, terms) {
-    const lower = text.toLocaleLowerCase();
-    return terms.filter(([term]) => lower.includes(term.toLocaleLowerCase()));
+    const matches = terms.filter(([term]) => matchesTerm(text, term));
+    return matches.filter(([term]) => !matches.some(([longerTerm]) =>
+        longerTerm.length > term.length && matchesTerm(longerTerm, term)));
+}
+
+function containsAny(text, terms) {
+    return terms.some((term) => matchesTerm(text, term));
+}
+
+function matchesTerm(text, term) {
+    const normalizedText = String(text || "").toLocaleLowerCase();
+    const normalizedTerm = term.toLocaleLowerCase();
+    if (/^[a-z0-9][a-z0-9\s'-]*$/i.test(term)) {
+        const escaped = normalizedTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
+        return new RegExp(`(^|[^a-z0-9])${escaped}(?=$|[^a-z0-9])`, "i").test(normalizedText);
+    }
+    return normalizedText.includes(normalizedTerm);
 }
 
 function classifyArticle(article) {
-    const cooperation = findMatches(article.title, relationTerms.cooperation);
-    const conflict = findMatches(article.title, relationTerms.conflict);
+    const analysisText = article.analysisText || article.title;
+    const cooperation = findMatches(analysisText, relationTerms.cooperation);
+    const conflict = findMatches(analysisText, relationTerms.conflict);
     const cooperationScore = cooperation.reduce((sum, [, weight]) => sum + weight, 0);
     const conflictScore = conflict.reduce((sum, [, weight]) => sum + weight, 0);
-    let relation = "neutral";
-    if (cooperationScore > conflictScore) relation = "cooperation";
-    if (conflictScore > cooperationScore) relation = "conflict";
+    let relation = "no_signal";
+    if (cooperationScore > 0 && conflictScore > 0) relation = "mixed";
+    else if (cooperationScore >= 2) relation = "cooperation";
+    else if (conflictScore >= 2) relation = "conflict";
 
     const matchedIssues = Object.entries(issueTerms)
-        .filter(([, terms]) => terms.some((term) => article.title.toLocaleLowerCase().includes(term.toLocaleLowerCase())))
+        .filter(([, terms]) => containsAny(analysisText, terms))
+        .map(([label]) => label);
+    const behaviorMatches = Object.entries(behaviorTerms)
+        .map(([label, terms]) => [label, terms.filter((term) => containsAny(analysisText, [term]))])
+        .filter(([, matches]) => matches.length);
+    const eventStageLabels = Object.entries(eventStageTerms)
+        .filter(([, terms]) => containsAny(analysisText, terms))
         .map(([label]) => label);
 
     return {
@@ -211,6 +266,13 @@ function classifyArticle(article) {
         relation,
         cooperationScore,
         conflictScore,
+        relationEvidence: [
+            ...cooperation.map(([term, weight]) => `협력 +${weight}: ${term}`),
+            ...conflict.map(([term, weight]) => `갈등 +${weight}: ${term}`),
+        ],
+        behaviorLabels: behaviorMatches.map(([label]) => label),
+        behaviorEvidence: behaviorMatches.flatMap(([label, matches]) => matches.map((term) => `${label}: ${term}`)),
+        eventStageLabels,
         issueLabels: matchedIssues.length ? matchedIssues : ["기타·미분류"],
     };
 }
@@ -299,6 +361,7 @@ async function fetchGoogleNewsFeed(countryA, countryB, period, korean) {
         const title = sourceMatch ? rawTitle.slice(0, sourceMatch.index).trim() : rawTitle;
         return normalizeArticle({
             title,
+            description: item.description || item.content || "",
             url: item.link,
             seendate: item.pubDate,
             domain: sourceMatch ? sourceMatch[1].trim() : item.author || "Google News",
@@ -334,8 +397,10 @@ function formatDate(date, options = {}) {
 }
 
 function summarize(articles) {
-    const counts = { cooperation: 0, neutral: 0, conflict: 0 };
+    const counts = { cooperation: 0, conflict: 0, mixed: 0, no_signal: 0 };
     const topics = new Map();
+    const behaviors = new Map();
+    const stages = new Map();
     const sources = new Set();
     const languages = new Set();
     articles.forEach((article) => {
@@ -343,15 +408,24 @@ function summarize(articles) {
         sources.add(article.domain);
         if (article.language !== "미상") languages.add(article.language);
         article.issueLabels.forEach((label) => topics.set(label, (topics.get(label) || 0) + 1));
+        article.behaviorLabels.forEach((label) => behaviors.set(label, (behaviors.get(label) || 0) + 1));
+        article.eventStageLabels.forEach((label) => stages.set(label, (stages.get(label) || 0) + 1));
     });
     const score = articles.length ? Math.round(((counts.cooperation - counts.conflict) / articles.length) * 100) : 0;
-    const relation = score >= 12 ? "cooperation" : score <= -12 ? "conflict" : "mixed";
+    const signalCoverage = percent(counts.cooperation + counts.conflict + counts.mixed, articles.length);
+    const relation = articles.length < 5
+        ? "insufficient"
+        : signalCoverage < 25
+            ? "limited"
+            : score >= 12 ? "cooperation" : score <= -12 ? "conflict" : "mixed";
     return {
         counts,
         topics: [...topics.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6),
+        behaviors: [...behaviors.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8),
+        stages: [...stages.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6),
         sourceCount: sources.size,
         languageCount: languages.size,
-        signalCoverage: percent(counts.cooperation + counts.conflict, articles.length),
+        signalCoverage,
         score,
         relation,
     };
@@ -364,7 +438,8 @@ function setWidth(id, value) {
 function renderDistribution(summary, total) {
     const items = [
         { key: "conflict", label: "갈등 신호", color: "var(--red)" },
-        { key: "neutral", label: "혼합·중립", color: "#aeb3aa" },
+        { key: "mixed", label: "복합 신호", color: "var(--amber)" },
+        { key: "no_signal", label: "신호 미발견", color: "#aeb3aa" },
         { key: "cooperation", label: "협력 신호", color: "var(--green)" },
     ];
     document.getElementById("distributionList").replaceChildren(...items.map((item) => {
@@ -383,6 +458,64 @@ function renderDistribution(summary, total) {
         row.append(label, track, count);
         return row;
     }));
+}
+
+function renderBehaviors(summary) {
+    const list = document.getElementById("behaviorList");
+    list.replaceChildren();
+    document.getElementById("behaviorTotal").textContent = `${summary.behaviors.length}개 유형`;
+    if (!summary.behaviors.length) {
+        const empty = document.createElement("p");
+        empty.className = "empty-articles";
+        empty.textContent = "관계 행동 키워드가 확인되지 않았습니다.";
+        list.appendChild(empty);
+        return;
+    }
+    const max = summary.behaviors[0][1];
+    summary.behaviors.forEach(([label, count]) => {
+        const row = document.createElement("div");
+        row.className = "topic-row";
+        const name = document.createElement("span");
+        name.textContent = label;
+        const track = document.createElement("div");
+        track.className = "topic-track";
+        const fill = document.createElement("i");
+        fill.style.width = `${Math.max(4, Math.round((count / max) * 100))}%`;
+        track.appendChild(fill);
+        const amount = document.createElement("b");
+        amount.textContent = `${count}건`;
+        row.append(name, track, amount);
+        list.appendChild(row);
+    });
+}
+
+function renderEventStages(summary) {
+    const list = document.getElementById("eventStageList");
+    list.replaceChildren();
+    document.getElementById("eventStageTotal").textContent = `${summary.stages.length}개 단계`;
+    if (!summary.stages.length) {
+        const empty = document.createElement("p");
+        empty.className = "empty-articles";
+        empty.textContent = "사건 단계 표현이 확인되지 않았습니다.";
+        list.appendChild(empty);
+        return;
+    }
+    const max = summary.stages[0][1];
+    summary.stages.forEach(([label, count]) => {
+        const row = document.createElement("div");
+        row.className = "topic-row";
+        const name = document.createElement("span");
+        name.textContent = label;
+        const track = document.createElement("div");
+        track.className = "topic-track";
+        const fill = document.createElement("i");
+        fill.style.width = `${Math.max(4, Math.round((count / max) * 100))}%`;
+        track.appendChild(fill);
+        const amount = document.createElement("b");
+        amount.textContent = `${count}건`;
+        row.append(name, track, amount);
+        list.appendChild(row);
+    });
 }
 
 function renderTopics(summary) {
@@ -417,7 +550,8 @@ function renderTopics(summary) {
 function labelRelation(relation) {
     if (relation === "cooperation") return "협력 신호";
     if (relation === "conflict") return "갈등 신호";
-    return "혼합·중립";
+    if (relation === "mixed") return "복합 신호";
+    return "관계 신호 미발견";
 }
 
 function renderArticles(articles, append = false) {
@@ -455,8 +589,23 @@ function renderArticles(articles, append = false) {
         }
         const summary = document.createElement("p");
         summary.className = "article-summary";
-        summary.textContent = article.issueLabels.join(" · ");
-        main.append(meta, title, summary);
+        summary.textContent = [
+            ...article.behaviorLabels,
+            ...article.issueLabels,
+            ...(article.eventStageLabels || []).map((label) => `단계·${label}`),
+        ].join(" · ");
+        const evidence = document.createElement("p");
+        evidence.className = "article-evidence";
+        const relationTermsFound = (article.relationEvidence || []).slice(0, 4);
+        const behaviorTermsFound = (article.behaviorEvidence || []).slice(0, 4);
+        const evidenceLines = [];
+        if (relationTermsFound.length) {
+            const label = article.relation === "no_signal" ? "관계 표현·점수 기준 미달" : "관계 신호 표현";
+            evidenceLines.push(`${label}: ${relationTermsFound.join(" · ")}`);
+        }
+        if (behaviorTermsFound.length) evidenceLines.push(`행동 표현: ${behaviorTermsFound.join(" · ")}`);
+        evidence.textContent = evidenceLines.length ? evidenceLines.join(" / ") : "등록된 관계·행동 키워드 미발견";
+        main.append(meta, title, summary, evidence);
         const signal = document.createElement("span");
         signal.className = `article-signal ${article.relation}`;
         signal.textContent = labelRelation(article.relation);
@@ -487,17 +636,25 @@ function renderResult(articles, countryA, countryB, period, cached, savedAt, pro
     document.getElementById("signalCoverage").textContent = `${summary.signalCoverage}%`;
     document.getElementById("cooperationCount").textContent = summary.counts.cooperation.toLocaleString("ko-KR");
     document.getElementById("conflictCount").textContent = summary.counts.conflict.toLocaleString("ko-KR");
-    const neutralCount = summary.counts.neutral;
+    document.getElementById("mixedCount").textContent = summary.counts.mixed.toLocaleString("ko-KR");
+    document.getElementById("noSignalCount").textContent = summary.counts.no_signal.toLocaleString("ko-KR");
     const total = articles.length || 1;
     setWidth("conflictMeter", percent(summary.counts.conflict, total));
-    setWidth("neutralMeter", percent(neutralCount, total));
+    setWidth("mixedMeter", percent(summary.counts.mixed, total));
+    setWidth("noSignalMeter", percent(summary.counts.no_signal, total));
     setWidth("cooperationMeter", percent(summary.counts.cooperation, total));
 
     const badge = document.getElementById("signalBadge");
-    badge.className = `signal-badge ${summary.relation === "mixed" ? "" : summary.relation}`.trim();
-    badge.textContent = summary.relation === "mixed" ? "혼합·중립" : summary.relation === "cooperation" ? "협력 신호 우세" : "갈등 신호 우세";
+    badge.className = `signal-badge ${summary.relation}`;
+    badge.textContent = {
+        cooperation: "협력 신호 우세",
+        conflict: "갈등 신호 우세",
+        mixed: "복합 신호",
+        limited: "명시적 신호 제한적",
+        insufficient: "표본 부족",
+    }[summary.relation];
     document.getElementById("relationSummary").textContent = articles.length
-        ? `기사 제목 ${articles.length}건 중 협력 신호 ${summary.counts.cooperation}건, 갈등 신호 ${summary.counts.conflict}건, 혼합·중립 ${summary.counts.neutral}건입니다. 관계 지수 ${summary.score > 0 ? "+" : ""}${summary.score}.`
+        ? `검색 기사 ${articles.length}건: 협력 ${summary.counts.cooperation} · 갈등 ${summary.counts.conflict} · 복합 ${summary.counts.mixed} · 신호 미발견 ${summary.counts.no_signal}. 분류 가능 비율 ${summary.signalCoverage}%. ${summary.relation === "limited" || summary.relation === "insufficient" ? "명시적 신호가 적어 우세 판정을 보류합니다." : `방향 지수 ${summary.score > 0 ? "+" : ""}${summary.score} (표본 기준).`}`
         : "검색 결과가 없습니다. 기간을 늘리거나 다른 국가쌍을 선택해보세요.";
 
     const sampleBadge = document.getElementById("sampleBadge");
@@ -514,6 +671,8 @@ function renderResult(articles, countryA, countryB, period, cached, savedAt, pro
                 ? `Google News RSS 보조 검색 결과 ${articles.length}건입니다. 최대 30건까지 제공하며 실제 건수는 피드 반환량에 따라 달라집니다. GDELT 전환 사유: ${fallbackReason}`
                 : "표본 수는 검색 기간과 뉴스 제공처의 수집 범위에 따라 달라집니다.";
 
+    renderBehaviors(summary);
+    renderEventStages(summary);
     renderTopics(summary);
     renderDistribution(summary, articles.length);
     renderArticles(articles);

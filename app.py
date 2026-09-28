@@ -32,6 +32,12 @@ def analysis2():
     return send_from_directory(app.root_path, "analysis2.html")
 
 
+@app.route("/analysis2-methodology")
+@app.route("/analysis2-methodology.html")
+def analysis2_methodology():
+    return send_from_directory(app.root_path, "analysis2-methodology.html")
+
+
 @app.route("/api/pairs")
 def get_pairs():
     pairs = [

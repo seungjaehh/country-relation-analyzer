@@ -75,7 +75,6 @@ const countryASelect = document.getElementById("countryA");
 const countryBSelect = document.getElementById("countryB");
 const periodSelect = document.getElementById("periodSelect");
 const analyzeButton = document.getElementById("analyzeButton");
-const swapButton = document.getElementById("swapCountries");
 const statusPanel = document.getElementById("statusPanel");
 const resultSection = document.getElementById("resultSection");
 const articleList = document.getElementById("articleList");
@@ -130,7 +129,12 @@ function buildRequestUrl(countryA, countryB, period) {
 }
 
 function cacheKey(countryA, countryB, period) {
-    return `relation-analysis-2:${countryA.value}|${countryB.value}|${period}`;
+    const [first, second] = canonicalPair(countryA, countryB);
+    return `relation-analysis-2:v2:${first.value}|${second.value}|${period}`;
+}
+
+function canonicalPair(countryA, countryB) {
+    return [countryA, countryB].sort((a, b) => a.value.localeCompare(b.value, "en"));
 }
 
 function getCached(key) {
@@ -212,13 +216,14 @@ function classifyArticle(article) {
 }
 
 async function fetchArticles(countryA, countryB, period) {
-    const key = cacheKey(countryA, countryB, period);
+    const [queryCountryA, queryCountryB] = canonicalPair(countryA, countryB);
+    const key = cacheKey(queryCountryA, queryCountryB, period);
     const cached = getCached(key);
     if (cached) return { articles: cached.articles.map(classifyArticle), cached: true, savedAt: cached.savedAt, provider: cached.provider || "저장 결과" };
 
     let gdeltError;
     try {
-        const response = await fetch(buildRequestUrl(countryA, countryB, period), {
+        const response = await fetch(buildRequestUrl(queryCountryA, queryCountryB, period), {
             headers: { Accept: "application/json" },
             signal: AbortSignal.timeout(6000),
         });
@@ -247,7 +252,7 @@ async function fetchArticles(countryA, countryB, period) {
                 : error;
     }
     try {
-        const backupArticles = await fetchGoogleNews(countryA, countryB, period);
+        const backupArticles = await fetchGoogleNews(queryCountryA, queryCountryB, period);
         saveCached(key, backupArticles, "Google News RSS");
         return {
             articles: backupArticles.map(classifyArticle),
@@ -504,9 +509,9 @@ function renderResult(articles, countryA, countryB, period, cached, savedAt, pro
     document.getElementById("sampleNote").textContent = articles.length >= MAX_ARTICLES
         ? `검색 결과가 최대 ${MAX_ARTICLES}건에 도달했습니다. 최신 기사 ${MAX_ARTICLES}건을 표시합니다.`
         : provider.includes("Google News") && articles.length >= 20
-            ? "GDELT 연결을 사용할 수 없어 Google News의 영어·한국어 RSS 검색 결과를 표시합니다. 보조 검색은 최대 30건을 제공합니다."
+            ? "GDELT 대신 Google News의 영어·한국어 RSS 결과를 표시합니다. 보조 검색은 최대 30건이며, 실제 건수는 각 피드의 반환량에 따라 달라집니다."
             : fallbackReason
-                ? `GDELT 응답 문제로 Google News RSS 보조 결과를 사용했습니다: ${fallbackReason}`
+                ? `Google News RSS 보조 검색 결과 ${articles.length}건입니다. 최대 30건까지 제공하며 실제 건수는 피드 반환량에 따라 달라집니다. GDELT 전환 사유: ${fallbackReason}`
                 : "표본 수는 검색 기간과 뉴스 제공처의 수집 범위에 따라 달라집니다.";
 
     renderTopics(summary);
@@ -532,7 +537,7 @@ async function analyzeSelectedPair() {
 
     analyzeButton.disabled = true;
     analyzeButton.querySelector("span").textContent = "뉴스 검색 중…";
-    setStatus("최신 국제 뉴스를 검색하고 있습니다", `${countryA.label}과 ${countryB.label}이 함께 언급된 기사 최대 ${MAX_ARTICLES}건을 가져옵니다.`, "loading");
+    setStatus("최신 국제 뉴스를 검색하고 있습니다", `${countryA.label}과 ${countryB.label}이 함께 언급된 기사를 최대 ${MAX_ARTICLES}건까지 요청합니다. 실제 결과 수는 뉴스 제공처의 수집량과 검색 조건에 따라 달라집니다.`, "loading");
     try {
         const result = await fetchArticles(countryA, countryB, periodSelect.value);
         renderResult(result.articles, countryA, countryB, periodSelect.value, result.cached, result.savedAt, result.provider, result.fallbackReason);
@@ -560,10 +565,4 @@ analyzeButton.addEventListener("click", analyzeSelectedPair);
 countryASelect.addEventListener("change", clearStaleResult);
 countryBSelect.addEventListener("change", clearStaleResult);
 periodSelect.addEventListener("change", clearStaleResult);
-swapButton.addEventListener("click", () => {
-    const previousA = countryASelect.value;
-    countryASelect.value = countryBSelect.value;
-    countryBSelect.value = previousA;
-    clearStaleResult();
-});
 loadMoreButton.addEventListener("click", () => renderArticles(currentArticles, true));

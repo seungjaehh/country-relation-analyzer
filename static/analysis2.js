@@ -1,4 +1,5 @@
 const GDELT_ENDPOINT = "https://api.gdeltproject.org/api/v2/doc/doc";
+const RSS2JSON_ENDPOINT = "https://api.rss2json.com/v1/api.json";
 const MAX_ARTICLES = 250;
 const PAGE_SIZE = 20;
 const CACHE_TTL_MS = 10 * 60 * 1000;
@@ -143,8 +144,9 @@ function getCached(key) {
     return null;
 }
 
-function saveCached(key, articles) {
-    try { localStorage.setItem(key, JSON.stringify({ savedAt: Date.now(), articles })); }
+function saveCached(key, articles, provider) {
+    const serializable = articles.map((article) => ({ ...article, date: article.date?.toISOString() || null }));
+    try { localStorage.setItem(key, JSON.stringify({ savedAt: Date.now(), provider, articles: serializable })); }
     catch (_) { /* The live result remains usable without local storage. */ }
 }
 
@@ -212,21 +214,17 @@ function classifyArticle(article) {
 async function fetchArticles(countryA, countryB, period) {
     const key = cacheKey(countryA, countryB, period);
     const cached = getCached(key);
-    if (cached) return { articles: cached.articles.map(classifyArticle), cached: true, savedAt: cached.savedAt };
+    if (cached) return { articles: cached.articles.map(classifyArticle), cached: true, savedAt: cached.savedAt, provider: cached.provider || "저장 결과" };
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 25000);
+    let gdeltError;
     try {
         const response = await fetch(buildRequestUrl(countryA, countryB, period), {
             headers: { Accept: "application/json" },
-            signal: controller.signal,
+            signal: AbortSignal.timeout(6000),
         });
-        if (response.status === 429) throw new Error("뉴스 제공처가 잠시 요청을 제한했습니다. 잠시 뒤 다시 시도해주세요.");
-        if (!response.ok) throw new Error(`뉴스 검색 요청이 실패했습니다. (HTTP ${response.status})`);
-        const body = await response.text();
-        let data;
-        try { data = JSON.parse(body); }
-        catch (_) { throw new Error("뉴스 제공처가 읽을 수 없는 응답을 반환했습니다. 잠시 후 다시 시도해주세요."); }
+        if (response.status === 429) throw new Error("GDELT가 잠시 요청을 제한했습니다.");
+        if (!response.ok) throw new Error(`GDELT 응답 오류 (HTTP ${response.status}).`);
+        const data = await response.json();
         if (data.error) throw new Error(`뉴스 검색 오류: ${data.error}`);
         const rawArticles = Array.isArray(data.articles) ? data.articles : [];
         const unique = new Map();
@@ -236,16 +234,89 @@ async function fetchArticles(countryA, countryB, period) {
             if (article.title && !unique.has(keyValue)) unique.set(keyValue, article);
         });
         const articles = [...unique.values()].sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0));
-        const serializable = articles.map((article) => ({ ...article, date: article.date?.toISOString() || null }));
-        saveCached(key, serializable);
-        return { articles: articles.map(classifyArticle), cached: false, savedAt: Date.now() };
+        if (articles.length) {
+            saveCached(key, articles, "GDELT DOC 2.0");
+            return { articles: articles.map(classifyArticle), cached: false, savedAt: Date.now(), provider: "GDELT DOC 2.0" };
+        }
+        gdeltError = new Error("GDELT 검색 결과가 없습니다.");
     } catch (error) {
-        if (error.name === "AbortError") throw new Error("뉴스 검색 시간이 초과됐습니다. 기간을 줄이거나 잠시 후 다시 시도해주세요.");
-        if (error instanceof TypeError) throw new Error("뉴스 제공처에 연결할 수 없습니다. 네트워크 연결 후 다시 시도해주세요.");
-        throw error;
-    } finally {
-        clearTimeout(timeoutId);
+        gdeltError = error.name === "TimeoutError"
+            ? new Error("GDELT 응답 시간이 초과됐습니다.")
+            : error instanceof TypeError
+                ? new Error("GDELT 연결이 차단되었거나 교차 출처 요청이 실패했습니다.")
+                : error;
     }
+    try {
+        const backupArticles = await fetchGoogleNews(countryA, countryB, period);
+        saveCached(key, backupArticles, "Google News RSS");
+        return {
+            articles: backupArticles.map(classifyArticle),
+            cached: false,
+            savedAt: Date.now(),
+            provider: "Google News RSS (GDELT 대체)",
+            fallbackReason: gdeltError.message,
+        };
+    } catch (fallbackError) {
+        throw new Error(`최신 뉴스 검색 실패 — GDELT: ${gdeltError.message} Google News: ${fallbackError.message}`);
+    }
+}
+
+function periodDays(period) {
+    return { "1week": 7, "1month": 30, "3months": 90 }[period] || 30;
+}
+
+function makeGoogleNewsUrl(countryA, countryB, period, korean = false) {
+    const days = periodDays(period);
+    const terms = korean
+        ? `"${countryA.label}" "${countryB.label}" when:${days}d`
+        : `"${countryA.value}" "${countryB.value}" when:${days}d`;
+    const locale = korean
+        ? { hl: "ko-KR", gl: "KR", ceid: "KR:ko" }
+        : { hl: "en-US", gl: "US", ceid: "US:en" };
+    const feed = new URL("https://news.google.com/rss/search");
+    feed.searchParams.set("q", terms);
+    Object.entries(locale).forEach(([name, value]) => feed.searchParams.set(name, value));
+    return feed.toString();
+}
+
+async function fetchGoogleNewsFeed(countryA, countryB, period, korean) {
+    const params = new URLSearchParams({ rss_url: makeGoogleNewsUrl(countryA, countryB, period, korean) });
+    const response = await fetch(`${RSS2JSON_ENDPOINT}?${params.toString()}`, {
+        headers: { Accept: "application/json" },
+        signal: AbortSignal.timeout(12000),
+    });
+    if (!response.ok) throw new Error(`Google News RSS 변환 오류 (HTTP ${response.status}).`);
+    const data = await response.json();
+    if (data.status !== "ok") throw new Error(data.message || "Google News RSS 피드를 읽을 수 없습니다.");
+    return (Array.isArray(data.items) ? data.items : []).map((item, index) => {
+        const rawTitle = String(item.title || "").trim();
+        const sourceMatch = rawTitle.match(/\s[-–]\s([^\-–]+)$/);
+        const title = sourceMatch ? rawTitle.slice(0, sourceMatch.index).trim() : rawTitle;
+        return normalizeArticle({
+            title,
+            url: item.link,
+            seendate: item.pubDate,
+            domain: sourceMatch ? sourceMatch[1].trim() : item.author || "Google News",
+            language: korean ? "Korean" : "English",
+        }, index);
+    });
+}
+
+async function fetchGoogleNews(countryA, countryB, period) {
+    const responses = await Promise.allSettled([
+        fetchGoogleNewsFeed(countryA, countryB, period, false),
+        fetchGoogleNewsFeed(countryA, countryB, period, true),
+    ]);
+    const successfulFeeds = responses.filter((result) => result.status === "fulfilled").map((result) => result.value);
+    if (!successfulFeeds.length) {
+        throw new Error(responses.map((result) => result.reason?.message || "RSS 요청 실패").join("; "));
+    }
+    const unique = new Map();
+    successfulFeeds.flat().forEach((article) => {
+        const articleKey = article.url || article.title.toLocaleLowerCase();
+        if (article.title && !unique.has(articleKey)) unique.set(articleKey, article);
+    });
+    return [...unique.values()].sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0)).slice(0, 30);
 }
 
 function percent(value, total) {
@@ -399,12 +470,12 @@ function renderArticles(articles, append = false) {
     }
 }
 
-function renderResult(articles, countryA, countryB, period, cached, savedAt) {
+function renderResult(articles, countryA, countryB, period, cached, savedAt, provider, fallbackReason) {
     currentArticles = articles;
     const summary = summarize(articles);
     const pairTitle = `${countryA.label} — ${countryB.label}`;
     document.getElementById("pairTitle").textContent = pairTitle;
-    document.getElementById("updatedAt").textContent = `${formatDate(new Date(savedAt), { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" })} ${cached ? "· 저장된 결과" : "· 방금 검색"}`;
+    document.getElementById("updatedAt").textContent = `${formatDate(new Date(savedAt), { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" })} · ${provider}${cached ? " · 저장" : ""}`;
     document.getElementById("articleCount").textContent = articles.length.toLocaleString("ko-KR");
     document.getElementById("sourceCount").textContent = summary.sourceCount.toLocaleString("ko-KR");
     document.getElementById("languageCount").textContent = summary.languageCount.toLocaleString("ko-KR");
@@ -432,13 +503,18 @@ function renderResult(articles, countryA, countryB, period, cached, savedAt) {
     sampleBadge.textContent = sampleLabel;
     document.getElementById("sampleNote").textContent = articles.length >= MAX_ARTICLES
         ? `검색 결과가 최대 ${MAX_ARTICLES}건에 도달했습니다. 최신 기사 ${MAX_ARTICLES}건을 표시합니다.`
-        : "표본 수는 검색 기간과 뉴스 제공처의 수집 범위에 따라 달라집니다.";
+        : provider.includes("Google News") && articles.length >= 20
+            ? "GDELT 연결을 사용할 수 없어 Google News의 영어·한국어 RSS 검색 결과를 표시합니다. 보조 검색은 최대 30건을 제공합니다."
+            : fallbackReason
+                ? `GDELT 응답 문제로 Google News RSS 보조 결과를 사용했습니다: ${fallbackReason}`
+                : "표본 수는 검색 기간과 뉴스 제공처의 수집 범위에 따라 달라집니다.";
 
     renderTopics(summary);
     renderDistribution(summary, articles.length);
     renderArticles(articles);
     resultSection.classList.remove("hidden");
-    setStatus("최신 뉴스 검색이 완료됐습니다", `${pairTitle} · ${periodLabel(period)} · 기사 제목의 관계 신호를 집계했습니다.`, "ready");
+    const sourceNote = fallbackReason ? ` GDELT 대신 보조 뉴스 검색을 사용했습니다.` : "";
+    setStatus("최신 뉴스 검색이 완료됐습니다", `${pairTitle} · ${periodLabel(period)} · ${provider} 기사 제목의 관계 신호를 집계했습니다.${sourceNote}`, "ready");
 }
 
 function periodLabel(period) {
@@ -459,7 +535,7 @@ async function analyzeSelectedPair() {
     setStatus("최신 국제 뉴스를 검색하고 있습니다", `${countryA.label}과 ${countryB.label}이 함께 언급된 기사 최대 ${MAX_ARTICLES}건을 가져옵니다.`, "loading");
     try {
         const result = await fetchArticles(countryA, countryB, periodSelect.value);
-        renderResult(result.articles, countryA, countryB, periodSelect.value, result.cached, result.savedAt);
+        renderResult(result.articles, countryA, countryB, periodSelect.value, result.cached, result.savedAt, result.provider, result.fallbackReason);
     } catch (error) {
         resultSection.classList.add("hidden");
         setStatus("최신 뉴스 검색을 완료하지 못했습니다", error.message, "error");
@@ -469,12 +545,25 @@ async function analyzeSelectedPair() {
     }
 }
 
+function clearStaleResult() {
+    resultSection.classList.add("hidden");
+    const countryA = countryFor(countryASelect.value);
+    const countryB = countryFor(countryBSelect.value);
+    if (countryA && countryB && countryA.value !== countryB.value) {
+        setStatus("분석 조건이 변경됐습니다", "새로 선택한 두 나라와 기간으로 최신 뉴스 분석을 실행해주세요.", "idle");
+    }
+}
+
 populateCountrySelect(countryASelect, "South Korea");
 populateCountrySelect(countryBSelect, "United States");
 analyzeButton.addEventListener("click", analyzeSelectedPair);
+countryASelect.addEventListener("change", clearStaleResult);
+countryBSelect.addEventListener("change", clearStaleResult);
+periodSelect.addEventListener("change", clearStaleResult);
 swapButton.addEventListener("click", () => {
     const previousA = countryASelect.value;
     countryASelect.value = countryBSelect.value;
     countryBSelect.value = previousA;
+    clearStaleResult();
 });
 loadMoreButton.addEventListener("click", () => renderArticles(currentArticles, true));

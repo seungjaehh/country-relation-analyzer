@@ -66,6 +66,20 @@ p {
     margin-top: 0;
 }
 
+.analysis2-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    color: var(--blue);
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.analysis2-link:hover {
+    text-decoration: underline;
+}
+
 .controls-card,
 .card,
 .notice {

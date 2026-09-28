@@ -1,7 +1,7 @@
 import traceback
 from pathlib import Path
 
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, send_from_directory
 
 from analyzer import COUNTRY_PAIRS, analyze_country_pair
 
@@ -24,6 +24,12 @@ def inject_static_version():
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+@app.route("/analysis2")
+@app.route("/analysis2.html")
+def analysis2():
+    return send_from_directory(app.root_path, "analysis2.html")
 
 
 @app.route("/api/pairs")
